@@ -1,0 +1,33 @@
+CTF
+
+Regular Jeopardy:
+Crypto, Prog, Forensics, Reverse
+
+In addition some kind of competititve ai game where each team submits various bots to play, 
+if your teams bot wins you get some points. The game would be reran about every 10-15mins
+
+Ideas for Ai Game:
+Grid based minion game: http://ants.aichallenge.org/
+
+bees!
+
+large x large grid containing all players
+grid will have random cave like obsticals, it will also wrap if you go off the sides
+each team will start with a hive and 9 bees around it.
+food will spawn around the map randomly (but symetrically), running over it with a bee will increase your hives food counter by 2. 
+every turn when your hives food value is greater than 0 and there is no bee standing on it, then another bee will spawn and the food value will decrease by 1.
+bees of opposing teams will kill each other if they attempt to move through each other (ex. Bee a moves right and Bee b moves left: ..ab..),
+they will also kill each other if they end on the same tile.
+you can also kill an enemy bee by targeting it (targeting a bee means that you cannot move for 4 turns, but when the targeting period is over, if the bee is within 3 spaces (pythagoean distance) it dies)
+bee range:
+..xxx..
+.xxxxx.
+xxxxxxx
+xxxBxxx
+xxxxxxx
+.xxxxx.
+..xxx..
+a bee can target any other bee at anytime even if it is currently out of range, but if it ends in range of the targeting bee, it dies.
+however, while a bee is targeting, if another bee lands on its tile, the targeting bee dies
+if a bee lands on the hive of another colony, that colony is destroyed (that colonys ai is stopped, all ants of its colony are erased, and that team loses)
+if a bot errors, then its colony is destroyed

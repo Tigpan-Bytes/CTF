@@ -13,12 +13,12 @@ bees!
 
 large x large grid containing all players
 grid will have random cave like obsticals, it will also wrap if you go off the sides
-each team will start with 2 hives and 9 bees around it.
+each team will start with 2 hives and 5 bees around each hive.
 food will spawn around the map randomly (but symetrically), running over it with a bee will increase each of your hives food counter by 1 (if you only have 1 hive then it increases it by 2). 
 every turn when your hives food value is greater than 0 and there is no bee standing on it, then another bee will spawn and the food value will decrease by 1.
 bees of opposing teams will kill each other if they attempt to move through each other (ex. Bee a moves right and Bee b moves left: ..ab..),
 they will also kill each other if they end on the same tile.
-you can also kill an enemy bee by targeting it (targeting a bee means that that bee cannot move for 4 turns, but when the targeting period is over, if the bee is within 3 spaces (eulclidean distance) it dies)
+you can also kill an enemy bee by targeting it (targeting a bee means that that bee cannot move for 2 turns, but when the targeting period is over, if the bee is within 3 spaces (eulclidean distance) it dies)
 bee range:
 ..xxx..
 .xxxxx.
@@ -29,6 +29,7 @@ xxxxxxx
 ..xxx..
 a bee can target any other bee at anytime even if it is currently out of range, but if it ends in range of the targeting bee, it dies.
 however, while a bee is targeting, if another bee lands on its tile, the targeting bee dies
+also a bee can only target once in its lifetime
 if a bee lands on the hive of another colony, that hive is destroyed
 when all of a colonys hives are destroyed that bot loses
 if a bot errors, then its loses

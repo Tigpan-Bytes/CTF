@@ -33,6 +33,10 @@ li:last-child {
     border-right: none;
 }
 
+form {
+    color: white;
+}
+
 .page-title {
     font-size: 24px;
     font-family: "Lucida Console", Monaco, monospace;

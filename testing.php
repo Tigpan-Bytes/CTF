@@ -2,26 +2,39 @@
 
 <?php
     $servername = "localhost";
-    $username = "username";
-    $password = "password";
+    $username = "admin";
+    $password = "pleaseNoHacking123";
+    $dbname = 'test';
 
-    echo $username;
-    echo $password;
-    
     // Create connection
-    $conn = mysqli_connect($servername, $username, $password);
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
     // Check connection
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    
-    // Create database
-    $sql = "CREATE DATABASE myDB";
-    if (mysqli_query($conn, $sql)) {
-        echo "Database created successfully";
+
+    $sql = "SELECT * FROM users";
+    $result = mysqli_query($conn, $sql);
+
+    $numrows = mysqli_num_rows($result);
+
+    if ($numrows > 0) {
+        echo "There are ".$numrows." rows.<br>";
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+        }
     } else {
-        echo "Error creating database: " . mysqli_error($conn);
+        echo "0 results";
     }
+
+    /*
+    There are 4 rows.
+    id: 0 - Name: Obama Care
+    id: 1 - Name: Tigpan McCool
+    id: 2 - Name: Abar NineEleven
+    id: 3 - Name: Anurag Kishore
+    */
     
     mysqli_close($conn);
 ?> 

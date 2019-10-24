@@ -1,7 +1,7 @@
 CTF
 
 Regular Jeopardy:
-Crypto, Prog (maybe), Forensics, Reverse
+Crypto, Prog (maybe, no taken by ai comp), Forensics, Reverse
 
 In addition some kind of competititve ai game where each team submits various bots to play, 
 if your teams bot wins you get some points. The game would be reran about every 10-15mins

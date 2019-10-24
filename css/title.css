@@ -7,9 +7,9 @@ body, html {
 
 .page-title {
     font-size: 24px;
-
+    display: block;
     font-family: "DejaVu Sans Mono", Menlo, Consolas, monospace;
-    color: #39d;
+    color: #39e;
 }
 
 .page-title:after {
@@ -29,7 +29,7 @@ body, html {
 .btn {
     border: none;
 
-    color: inherit;
+    color: #8cf;
     font-size: inherit;
     font-family: inherit;
     background-color: inherit;

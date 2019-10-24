@@ -15,6 +15,8 @@
             header('Location: main.php');
         }
     }
+
+    $_SESSION['titlePath'] = ' Login';
 ?>
 
 <?php include 'head.php';?>

@@ -1,5 +1,5 @@
-<span class='page-title'> 
-    <span style='float:left'>Capture the Flag: <span style='color:grey'>|</span> Jeopardy > Crypto</span> 
+<div class='page-title'> 
+    <span style='float:left'>Capture the Flag: <span style='color:grey'>|</span> <?php echo $_SESSION["titlePath"]; ?></span> 
     <?php
         if (isset($auth) && $auth['success'])
         {
@@ -7,28 +7,16 @@
             <span style="float:right">
                 '.$_SESSION["username"].'
             <span style="color:grey"> | </span> 
-                <button onclick="redir();" class="btn">Logout</button>
-            </span>
-
-            <script type="text/javascript">
-            function redir() {
-                window.location = "./logout.php";
-            }
-            </script>';
+                <button onclick="location.href=\'logout.php\'" class="btn">Logout</button>
+            </span>';
         }
         else
         {
             echo'
             <span style="float:right">
-                <button onclick="redir();" class="btn">Login</button>
-            </span>
-            
-            <script type="text/javascript">
-            function redir() {
-                window.location = "./login.php";
-            }
-            </script>';
+                <button onclick="location.href=\'login.php\'" class="btn">Login</button>
+            </span>';
         }
     ?>
-</span>
+</div>
 <div class='page-spacer'></div>

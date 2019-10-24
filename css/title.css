@@ -34,6 +34,7 @@ body, html {
     font-size: inherit;
     font-family: inherit;
     background-color: inherit;
+    padding: 0px 0px;
     
     cursor: pointer;
     display: inline;

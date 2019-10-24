@@ -3,16 +3,18 @@
 
     include 'func.php';
 
-    $auth = isAuthorised(getSessionVar('username'), getSessionVar('password'), TRUE);
-    if ($auth['success'])
+    if(array_key_exists('submit', $_POST))
     {
-        $message = 'Yeeter';
+        $auth = isAuthorised(getSessionVar('username'), getSessionVar('password'), TRUE);
+        if (!$auth['success'])
+        {
+            $err = $auth['err'];
+        }
+        else
+        {
+            header('Location: main.php');
+        }
     }
-    else
-    {
-        $err = $auth['err'];
-    }
-    //header('Location: index.php');
 ?>
 
 <?php include 'head.php';?>
@@ -20,18 +22,18 @@
 <body>
 	<?php include 'page-title.php';?>
 
-    Welcome <?php echo $_POST["username"]; ?><br>
-    Your password is: <?php echo $_POST["password"]; ?>
+    <form method="post">
+		Username: <input type="text" name="username"><br>
+		Password: <input type="text" name="password"><br>
+		<input type="submit" name='submit'>
+	</form>
+
     <br />
-    <br />
+
     <?php
-        if (isset($err))
-        {
-            echo "Err: ".$err."<br>";
-        }
-        if (isset($message))
-        {
-            echo "Message: ".$message."<br>";
-        }
-    ?> 
+        if(isset($err)) 
+        { 
+            echo "Error: ".$err;
+        } 
+    ?>
 </body>

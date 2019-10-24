@@ -13,16 +13,21 @@
             <script type="text/javascript">
             function redir() {
                 window.location = "./logout.php";
-              }
+            }
             </script>';
-            
         }
         else
         {
             echo'
             <span style="float:right">
-                <button onclick="location.href="logout.php"" class="btn">Login</button>
-            </span>';
+                <button onclick="redir();" class="btn">Login</button>
+            </span>
+            
+            <script type="text/javascript">
+            function redir() {
+                window.location = "./login.php";
+            }
+            </script>';
         }
     ?>
 </span>

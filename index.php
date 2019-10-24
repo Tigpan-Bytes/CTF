@@ -4,6 +4,11 @@
 	include 'func.php';
     
 	$auth = isAuthorised(getSessionVar('username'), getSessionVar('password'));
+
+	if ($auth['success'])
+	{
+		header('Location: main.php');
+	}
 ?>
 
 <?php include 'head.php';?>
@@ -11,9 +16,5 @@
 <body>
 	<?php include 'page-title.php';?>
 
-	<form action="login.php" method="post">
-		Username: <input type="text" name="username"><br>
-		Password: <input type="text" name="password"><br>
-		<input type="submit">
-	</form>
+	<p>Sup homies, this is the index page, it will also redirect you if you are logged in, login to continue.</p>
 </body>

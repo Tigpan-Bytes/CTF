@@ -26,3 +26,30 @@ li a:hover {
 li:last-child {
     border-right: none;
 }
+
+form {
+    color: white;
+    font-size: 18px;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+h2 {
+    color: white;
+    font-size: 28px;
+}
+
+p {
+    color: #777;
+    font-size: 18px;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+p2 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+code {
+    font-family: monospace, serif;
+}

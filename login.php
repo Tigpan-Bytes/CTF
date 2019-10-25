@@ -17,6 +17,7 @@
     }
 
     $_SESSION['titlePath'] = ' Login';
+    $_SESSION['redir'] = '';
 ?>
 
 <?php include 'head.php';?>
@@ -35,7 +36,7 @@
     <?php
         if(isset($err)) 
         { 
-            echo "Error: ".$err;
+            echo "<p>Error: ".$err."</p>";
         } 
     ?>
 </body>

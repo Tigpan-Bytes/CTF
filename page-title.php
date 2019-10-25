@@ -7,14 +7,14 @@
             <span style="float:right">
                 '.$_SESSION["username"].'
             <span style="color:grey"> | </span> 
-                <button onclick="location.href=\'logout.php\'" class="btn">Logout</button>
+                <button onclick="location.href=\''.$_SESSION["redir"].'logout.php\'" class="btn">Logout</button>
             </span>';
         }
         else
         {
             echo'
             <span style="float:right">
-                <button onclick="location.href=\'login.php\'" class="btn">Login</button>
+                <button onclick="location.href=\''.$_SESSION["redir"].'login.php\'" class="btn">Login</button>
             </span>';
         }
     ?>

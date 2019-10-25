@@ -33,6 +33,19 @@ form {
     font-family: 'Anonymous Pro', monospace;
 }
 
+h3 {
+    color: white;
+    font-size: 28px;
+
+    text-align: right;
+    margin-top: 44px;
+    padding-top: 8px;
+    margin-bottom: 0px;
+    padding-bottom: 8px;
+
+    font-family: inherit;
+}
+
 h2 {
     color: white;
     font-size: 28px;
@@ -75,22 +88,29 @@ p2 {
 
 code {
     font-family: monospace, serif;
+    color: #aaa;
+    font-size: 18px;
+    margin-bottom: 32px;
+    background-color: #222;
 }
 
 .main-holder {
-    width: 80%;
+    float: left;
+    width: 70%;
     margin: auto;
 }
 
 .portion-holder {
+    padding-top: 0px;
+    margin-top: 0px;
     padding-bottom: 16px;
     line-height: 120%;
 }
 
 a {
-    color: #39d;;
+    color: #39d;
 }
 
 a:visited {
-    color: #8cf;;
+    color: #8cf;
 }

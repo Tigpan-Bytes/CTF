@@ -11,6 +11,7 @@
 	}
 
 	$_SESSION['titlePath'] = 'Index';
+	$_SESSION['redir'] = '';
 ?>
 
 <?php include 'head.php';?>

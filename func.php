@@ -52,6 +52,7 @@
                     {
                         $_SESSION["username"] = $un;
                         $_SESSION["password"] = $pw;
+                        $_SESSION["team"] = $row['team'];
                     }
 
                     $returnable = ['success'=>TRUE, 'err'=>""];

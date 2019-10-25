@@ -11,12 +11,14 @@
     }
 
     $_SESSION['titlePath'] = 'Main';
+    $_SESSION['redir'] = '';
 ?>
 
 <?php include 'head.php';?>
 
 <body>
-	<?php include 'page-title.php';?>
+    <?php include 'page-title.php';?>
+    
     <div class='main-holder'>
         <div class='portion-holder'>
             <div class='underline' onclick="location.href='challenges.php'">
@@ -35,10 +37,12 @@
 
         <div class='portion-holder'>
             <div class='underline'>
-                <h2>Bot Conquest</h2>
+                <h2>AI Battle</h2>
             </div>
             <p>&emsp;&emsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus optio quas culpa tenetur. 
             Quibusdam eos quaerat distinctio iure error architecto adipisci dolores veniam, nihil voluptas, dolor ex reprehenderit aliquid?</p>
         </div>
     </div>
+
+    <?php include 'scoreboard.php';?>
 </body>

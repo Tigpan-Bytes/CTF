@@ -23,6 +23,15 @@ number {
     color: #888;
 }
 
+.teamname {
+    font-size: 24px;
+    text-align: left;
+    float: left;
+
+    font-family: "DejaVu Sans Mono", Menlo, Consolas, monospace;
+    color: #39e;
+}
+
 teamname {
     font-size: 24px;
     text-align: left;
@@ -32,7 +41,7 @@ teamname {
     color: #39e;
 }
 
-yourteamname {
+.yourteamname {
     font-size: 24px;
     text-align: left;
     float: left;
@@ -48,4 +57,22 @@ teamscore {
 
     font-family: "DejaVu Sans Mono", Menlo, Consolas, monospace;
     color: #d4e;
+}
+
+.clickable {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    margin-top: 2px;
+}
+
+.clickable:hover {
+    background: #333;
+}
+
+.entry {
+    padding: 0px 0px;
+    margin: 0px 0px;
 }

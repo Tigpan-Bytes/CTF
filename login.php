@@ -23,20 +23,20 @@
 <?php include 'head.php';?>
 
 <body>
-	<?php include 'page-title.php';?>
-
-    <form method="post">
-		Username: <input type="text" name="username"><br>
-		Password: <input type="text" name="password"><br>
-		<input type="submit" name='submit'>
-	</form>
-
-    <br />
-
+    <?php include 'page-title.php';?>
+    
     <?php
         if(isset($err)) 
         { 
-            echo "<p>Error: ".$err."</p>";
+            echo "<p style='text-align: center;'>Error: ".$err."</p>";
         } 
     ?>
+
+    <div class='login-box login'>
+        <form method="post">
+            Username: <input type="text" name="username" class="login-input"><br>
+            Password: <input type="password" name="password" class="login-input"><br>
+            <input type="submit" name='submit' class="login-submit" value="Login">
+        </form>
+    </div>
 </body>

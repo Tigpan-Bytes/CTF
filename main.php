@@ -25,22 +25,32 @@
                 <h2>Jeopardy</h2>
             </div>
 
-            <p>&emsp;&emsp;This is the main page for only people who have logged in. In the future this will link to the jeopardy and the ai comp. 
-            Also on the right side bar (if you are not in a challenge), the scores for each team. Base the design off <a href="https://github.com/UnrealAkama/NightShade">this</a>.</p>
+            <p>&emsp;&emsp;The Jeopardy Capture the Flag event is a CTF that is seperated into catagories. Each catagory covering
+            a different type and area of hacking. Each catagory is also seperated into different challenges (4 challenges per catagory 
+            for this CTF), each one harder than the last but also awarding more points. You arn't restricted to only a specific 
+            catagory or even solving the challenges in order, you may do any challenge at any time. There are 3 different catagories 
+            for this CTF.</p>
             
-            <p>&emsp;&emsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus adipisci perferendis labore ipsa harum repudiandae ratione unde voluptate, pariatur, 
-            accusamus porro eius eaque nihil officiis laborum libero laudantium consequatur aperiam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quibusdam temporibus hic sunt
-            aperiam illum accusamus alias. Ullam natus voluptatum fugiat doloribus culpa magni repellendus nihil, excepturi, deleniti dolor expedita.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas distinctio voluptates ut, commodi pariatur obcaecati similique repellat 
-            perspiciatis vitae accusamus sequi totam aspernatur facilis officia quidem autem temporibus ad earum!</p>
+            <p>&emsp;&emsp;
+            <span style='color: white;'>Crypto</span> is cracking codes and solving ciphers. 
+            <span style='color: white;'>Forensics</span> is about finding hidden information to piece together the Flag. Finally
+            <span style='color: white;'>Reverse</span> is all about working backwards through code to find the Flag.
+            </p>
         </div>
 
         <div class='portion-holder'>
             <div class='underline'>
                 <h2>AI Battle</h2>
             </div>
-            <p>&emsp;&emsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus optio quas culpa tenetur. 
-            Quibusdam eos quaerat distinctio iure error architecto adipisci dolores veniam, nihil voluptas, dolor ex reprehenderit aliquid?</p>
+
+            <p>&emsp;&emsp;In most CTFs for your skill level, there is typically a Misc or Prog catagory for coding
+			programs to solve specific problems. The twist for this CTF is that instead of a Prog catagory, an AI Battle is being
+			held. Each team submits their best AIs to play a simple game, every <span style='color: white;'>10mins</span> each team's most recent AI is tested against
+            all the other team's Bots. The team who gets <span style='color: white;'>first gets 50 points</span>, <span style='color: white;'>second gets 40 points</span>, 
+            and <span style='color: white;'>third gets 30 points</span>. Each team can
+			submit AIs as often as they please, but only the most recent one is used. Everyone will have access to extensive documentation,
+			some sample Bots, and an API for for controling the AI, and a local version of the game to test your bot before the match. Have fun!
+			</p>
         </div>
     </div>
 

@@ -9,6 +9,10 @@
     {
         header('Location: index.php');
     }
+    else
+    {
+        $flagResult = checkFlag('well-done-you-are-now-a-member-of-the-pwn-patrol---welcome-to-the-force-sir', 'b7 String', 100);
+    }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\'../challenges.php\'" class="btn">Challenges</button> >
@@ -16,56 +20,9 @@
 
     $_SESSION['redir'] = '../';
 
-    $error = false;
-    $success = false;
-    $failure = false;
-    if(array_key_exists('submit', $_POST))
-    {
-        if ($_POST['flag'] == 'well-done-you-are-now-a-member-of-the-pwn-patrol---welcome-to-the-force-sir')
-        {
-            $servername = "localhost";
-            $username = "admin";
-            $password = "pleaseNoHacking123";
-            $dbname = "ctf";
-
-            // Create connection
-            $conn = mysqli_connect($servername, $username, $password, $dbname);
-            // Check connection
-            if (!$conn) 
-            {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-
-            $chname = 'b7 String';
-            $likechname = '%b7 String%';
-            $error = true;
-
-            $stmt = mysqli_prepare($conn, "UPDATE teams SET score = score + 100 WHERE (teamname = ? AND solved NOT LIKE ?)");
-            mysqli_stmt_bind_param($stmt, 'ss', $_SESSION['team'], $likechname);
-            
-            if (mysqli_stmt_execute($stmt))
-            {
-                if (mysqli_affected_rows($conn) == 1)
-                {
-                    $stmt = mysqli_prepare($conn, "UPDATE teams SET solved = concat(solved, concat(?, ',')) WHERE (teamname = ? AND solved NOT LIKE ?)");
-                    mysqli_stmt_bind_param($stmt, 'sss', $chname, $_SESSION['team'], $likechname);
-                    if (mysqli_stmt_execute($stmt))
-                    {
-                        $success = true;
-                    }
-                }
-            }
-
-            mysqli_close($conn);
-        }
-        else
-        {
-            $failure = true;
-        }
-    }
 ?>
 
-<?php include 'chhead.php';?>
+<?php include '../head.php';?>
 
 <body>
     <?php include '../page-title.php';?>
@@ -95,15 +52,15 @@
             </form>
 
             <?php
-                if ($success) 
+                if ($flagResult == 'success') 
                 { 
                     echo "<div class='success'>Flag successful! You earned 100 points for your team!</div>";
                 }
-                elseif ($error)
+                elseif ($flagResult == 'error')
                 {
                     echo "<div class='error'>Flag successful but your team has already hacked this challenge.</div>";
                 }
-                if ($failure) 
+                elseif ($flagResult == 'failure') 
                 { 
                     echo "<div class='failure'>Flag failed. Try again.</div>";
                 } 

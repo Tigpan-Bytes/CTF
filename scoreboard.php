@@ -26,11 +26,15 @@
             {
                 if (!empty($_SESSION['team']) && $row['teamname'] == $_SESSION['team'])
                 {
-                    echo "<arrow>=>&nbsp;</arrow><yourteamname>" . $row["teamname"]. "</yourteamname> <teamscore>" . $row["score"]. "</teamscore><br>";
+                    echo "<arrow>=>&nbsp;</arrow>
+                    <form method='get' action='viewteam.php' class='entry'><input type='submit' class='yourteamname clickable' name='viewteam' value='". $row["teamname"]."'>
+                    </input> <teamscore>" . $row["score"]. "</teamscore></form><br>";
                 }
                 else
                 {
-                    echo "<number>".$num.":&nbsp;</number><teamname>" . $row["teamname"]. "</teamname> <teamscore>" . $row["score"]. "</teamscore><br>";
+                    echo "<number>".$num.":&nbsp;</number>
+                    <form method='get' action='viewteam.php' class='entry'><input type='submit' class='teamname clickable' name='viewteam' value='". $row["teamname"]."'>
+                    </input> <teamscore>" . $row["score"]. "</teamscore></form><br>";
                 }
                 $num++;
             }

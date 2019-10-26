@@ -1,0 +1,52 @@
+.login-box
+{
+    width: calc(50% - 40px);
+    margin: auto;
+    line-height: 200%;
+    text-align: center;
+    padding: 30px 10px;
+    margin-top: 40px;
+
+    border: 3px solid #aaa;
+    color: white;
+}
+
+.join-team {
+    float: left;
+}
+
+.create-team {
+    float: right;
+}
+
+.login-input {
+    width: calc(15% + 130px);
+    height: 28px;
+
+    font-size: 18px;
+    border: 1px solid white;
+    color: white;
+    background-color: #222;
+    font-family: 'Anonymous Pro', monospace;
+    margin-bottom: 16px;
+
+    padding-left: 8px;
+}
+
+.login-submit {
+    width: 260px;
+    height: 28px;
+
+    font-size: 18px;
+    border: 1px solid white;
+    color: white;
+    background-color: #222;
+    font-family: 'Anonymous Pro', monospace;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.login-submit:hover 
+{
+    background: #444;
+}

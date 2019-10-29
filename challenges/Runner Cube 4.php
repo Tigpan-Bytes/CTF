@@ -11,12 +11,12 @@
     }
     else
     {
-        $flagResult = checkFlag('well-done-you-are-now-a-member-of-the-pwn-patrol---welcome-to-the-force-sir', 'b7 String', 100);
+        $flagResult = checkFlag('sh0u1d.h4ve.b3at.1t.l1g1t', 'Runner Cube 4', 100);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\'../challenges.php\'" class="btn">Challenges</button> >
-    b7 String';
+    Runner Man 4';
 
     $_SESSION['redir'] = '../';
 ?>
@@ -29,20 +29,20 @@
     <div class='challenge-holder'>
         <div class='portion-holder'>
             <div class='underline'>
-                <h3 style='text-align:center;'>b7 String</h3>
-                <p style='text-align:center;'>Crypto • 100 points</p>
+                <h3 style='text-align:center;'>Runner Cube 4</h3>
+                <p style='text-align:center;'>Forensics • 100 points</p>
             </div>
 
             <div class='underline'>
-                <p>&emsp;&emsp;Computers store numbers in many different ways. They typically store numbers in one of four ways: binary (0-1, base 2), 
-                octal (0-7, base 8), decimal (0-9, base 10), and hexadecimal (0-F, base 16). Although anybody could use any base they choose...</p>
+                <p>&emsp;&emsp;As you may already know, when you go on any website you can right click to 'inspect element' this allows you to look
+                at all of the HTML of the page and even change it (it doesn't change for everybody just locally for yourself). In addition to that you
+                can also view any JavaScript being run by inspecting element or pressing f12 to bring up the developer console, then either going to
+                sources (Chrome) or debugger (Firefox). In that section you can find the JavaScript code, it is also sometimes a good idea to copy the JS
+                the HTML onto your computer so you can edit it and view it more easily.</p>
                 
-                <p>&emsp;&emsp;In a computer, text is typically stored as a long string of bytes, each of those bytes represents a number which represents a character.
-                For example: 0 -> 'a', 1 -> 'b', 2 -> c... '26' -> '-'. If you would want to decrypt such a code, doing it by hand would take much too long.
-                Decrypting it by a making a program would be much smarter.</p>
+                <p>&emsp;&emsp;Can you beat my game, <a href="../challenge-site/Runner Cube 4.html">Runner Cube 4</a>? I could do it first try 
+                (I might have to use a cheat code however).</p>
 
-                <code>Flag = (31, 4, 14, 14, 35, 3, 20, 16, 4, 35, 33, 20, 26, 35, 0, 23, 4, 35, 16, 20, 31, 35, 0, 35, 15, 4, 15, 1, 4, 23, 35, 20, 5, 35, 
-                25, 10, 4, 35, 21, 31, 16, 35, 21, 0, 25, 23, 20, 14, 35, 35, 35, 31, 4, 14, 2, 20, 15, 4, 35, 25, 20, 35, 25, 10, 4, 35, 5, 20, 23, 2, 4, 35, 24, 11, 23)7</code>
              </div>
 
             <form method="post">

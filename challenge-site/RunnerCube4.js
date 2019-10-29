@@ -50,7 +50,7 @@ function draw()
             stroke(255);
             strokeWeight(1);
             rect(windowWidth * 0.3, windowHeight / 2 - 80, windowWidth * 0.4, 80);
-
+            //flag, ha theres no flag here but you tried to control-f didn't you. so predictable
             fill(255);
             noStroke();
             text('Start Game', windowWidth / 2, windowHeight / 2 - 30);
@@ -168,15 +168,15 @@ function spawnCubes()
     switch (level)
     {
         case 0:
-            shouldSpawn = cubeTime > 1.3;
+            shouldSpawn = cubeTime > 1.4;
             message = 'Remember, ' + userName + '. Up and Down Arrows, or W and S to move!';
             break;
         case 1:
-            shouldSpawn = cubeTime > 0.65;
+            shouldSpawn = cubeTime > 0.7;
             message = 'Not bad ' + userName + '...';
             break;
         case 2:
-            shouldSpawn = cubeTime > 0.4;
+            shouldSpawn = cubeTime > 0.5;
             message = "It will get harder " + userName + ", don't worry ;)";
             break;
         default:

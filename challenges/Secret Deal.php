@@ -11,12 +11,12 @@
     }
     else
     {
-        $flagResult = checkFlag('well-done-you-are-now-a-member-of-the-pwn-patrol---welcome-to-the-force-sir', 'Secret Admirer', 150);
+        $flagResult = checkFlag('shawcenter', 'Secret Deal', 150);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\'../challenges.php\'" class="btn">Challenges</button> >
-    Secret Admirer';
+    Secret Deal';
 
     $_SESSION['redir'] = '../';
 ?>
@@ -29,20 +29,20 @@
     <div class='challenge-holder'>
         <div class='portion-holder'>
             <div class='underline'>
-                <h3 style='text-align:center;'>Secret Admirer</h3>
+                <h3 style='text-align:center;'>Secret Deal</h3>
                 <p style='text-align:center;'>Reverse • 150 points</p>
             </div>
 
             <div class='underline'>
-                <p>&emsp;&emsp;Computers store numbers in many different ways. They typically store numbers in one of four ways: binary (0-1, base 2), 
-                octal (0-7, base 8), decimal (0-9, base 10), and hexadecimal (0-F, base 16). Although anybody could use any base they choose...</p>
-                
-                <p>&emsp;&emsp;In a computer, text is typically stored as a long string of bytes, each of those bytes represents a number which represents a character.
-                For example: 0 -> 'a', 1 -> 'b', 2 -> c... '26' -> '-'. If you would want to decrypt such a code, doing it by hand would take much too long.
-                Decrypting it by a making a program would be much smarter.</p>
+                <p>&emsp;&emsp;Reverse challenges require a lot of technical knowledge and a lot of searching what random functions do on the internet. 
+                For these challenges you will be given a piece of code that typically checks an input, encodes it, and checks it against a constant value.
+                The input that results in the correct outcome being met is the flag.</p>
 
-                <code>Flag = (31, 4, 14, 14, 35, 3, 20, 16, 4, 35, 33, 20, 26, 35, 0, 23, 4, 35, 16, 20, 31, 35, 0, 35, 15, 4, 15, 1, 4, 23, 35, 20, 5, 35, 
-                25, 10, 4, 35, 21, 31, 16, 35, 21, 0, 25, 23, 20, 14, 35, 35, 35, 31, 4, 14, 2, 20, 15, 4, 35, 25, 20, 35, 25, 10, 4, 35, 5, 20, 23, 2, 4, 35, 24, 11, 23)7</code>
+                <p>&emsp;&emsp;Some important things to look up for these challenges may be the ASCII values for characters and what Bitwise operations are.
+                They may not be for this one, but they may come up later.</p>
+                
+                <p>&emsp;&emsp;"Hey buddy, meet me behind <a href="../challenge-site/Secret-Deal.py" download>this</a> location tonight. 
+                Then I can give you the 1337 hacking tools." - Unknown.</p>
              </div>
 
             <form method="post">
@@ -53,7 +53,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 100 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 150 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

@@ -57,11 +57,11 @@
                     b7 String<br><span class='score'>100</span></td> <!-- base13 num to string -->
                 <td <?php if (strpos($solvedChallenges, 'Runner Cube 4') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/Runner Cube 4.php'">
                     Runner Cube 4<br><span class='score'>100</span></td> <!-- look in javascript for secret username code -->
-                <td <?php if (strpos($solvedChallenges, 'Secret Admirer') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/Secret Admirer.php'">
-                    Secret Admirer<br><span class='score'>150</span></td> <!-- reverse some quick js to find lovers name -->
+                <td <?php if (strpos($solvedChallenges, 'Secret Deal') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/Secret Deal.php'">
+                    Secret Deal<br><span class='score'>150</span></td> <!-- reverse some quick js to find lovers name -->
             </tr>
             <tr>
-                <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?>>
+                <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/RanchCipher.php'">
                     RanchCipher<br><span class='score'>150</span></td> <!-- caesar cypher but every character has a different offset -->
                 <td <?php if (strpos($solvedChallenges, 'Gallery') !== false) { echo "class='complete'"; }?>>
                     Gallery<br><span class='score'>100</span></td> <!-- inspect some pngs with notepad to find parts of flag -->

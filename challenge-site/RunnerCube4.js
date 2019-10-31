@@ -180,7 +180,7 @@ function spawnCubes()
             message = "It will get harder " + userName + ", don't worry ;)";
             break;
         default:
-            if (userName == 'FL4G=sh0u1d.h4ve.b3at.1t.l1g1t')
+            if (userName == 'ḞL4G=sh0u1d.h4ve.b3at.1t.l1g1t')
             {
                 shouldSpawn = cubeTime > 0.4;
                 message = 'Have fun, ' + userName + '. You are so cool!';

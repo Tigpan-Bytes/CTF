@@ -57,7 +57,7 @@
                     b7 String<br><span class='score'>100</span></td> <!-- base13 num to string -->
                 <td <?php if (strpos($solvedChallenges, 'Runner Cube 4') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/Runner Cube 4.php'">
                     Runner Cube 4<br><span class='score'>100</span></td> <!-- look in javascript for secret username code -->
-                <td <?php if (strpos($solvedChallenges, 'Secret Admirer') !== false) { echo "class='complete'"; }?>>
+                <td <?php if (strpos($solvedChallenges, 'Secret Admirer') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/Secret Admirer.php'">
                     Secret Admirer<br><span class='score'>150</span></td> <!-- reverse some quick js to find lovers name -->
             </tr>
             <tr>

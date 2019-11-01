@@ -1,7 +1,9 @@
 <?php
 	session_start();
 
-	include '../func.php';
+    $_SESSION['redir'] = '../../';
+
+	include $_SESSION['redir'].'func.php'; 
     
     $auth = isAuthorised(getSessionVar('username'), getSessionVar('password'));
 
@@ -11,35 +13,31 @@
     }
     else
     {
-        $flagResult = checkFlag('LE0n4rD0-dA-vInC1', 'Gallery', 100);
+        $flagResult = checkFlag('justcantlose', 'Literal Reversal', 250);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
-    <button onclick="location.href=\'../challenges.php\'" class="btn">Challenges</button> >
-    Gallery';
-
-    $_SESSION['redir'] = '../';
+    <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
+    Literal Reversal';
 ?>
 
-<?php include '../head.php';?>
+<?php include $_SESSION['redir'].'head.php';?>
 
 <body>
-    <?php include '../page-title.php';?>
+    <?php include $_SESSION['redir'].'page-title.php';?>
     
     <div class='challenge-holder'>
         <div class='portion-holder'>
             <div class='underline'>
-                <h3 style='text-align:center;'>Gallery</h3>
-                <p style='text-align:center;'>Forensics • 100 points</p>
+                <h3 style='text-align:center;'>Literal Reversal</h3>
+                <p style='text-align:center;'>Reverse • 250 points</p>
             </div>
 
             <div class='underline'>
-                <p>&emsp;&emsp;"Hello, sorry the Gallery doesn't have any paintings to show you yet. We do have paintings, but they are all broken!
-                We can't seem to look at them, try reaching deep into the text of the painting to fix it."</p>
+                <p>&emsp;&emsp;Alright buddy, that reversal was easy peasy, try this one on for size. This one is a bit more complicated.</p>
                 
-                <p>&emsp;&emsp;<a href="../challenge-site/starry-night.jpg" download>Starry Night</a> - Vincent van Gogh (CURRENTLY BROKEN)</p>
-                <p>&emsp;&emsp;<a href="../challenge-site/the-scream.jpg" download>The Scream</a> - Edvard Munch (CURRENTLY BROKEN)</p>
-                <p>&emsp;&emsp;<a href="../challenge-site/the-persistence-of-memory.jpg" download>The Persistence of Memory</a> - Salvador Dali (CURRENTLY BROKEN)</p>
+                <p>&emsp;If you can crack the code to <a href="<?php echo $_SESSION['redir']?>challenge-site/Literal Reversal.html">this</a>, I might just have to give you
+                250 points.</p>
              </div>
 
             <form method="post">
@@ -50,7 +48,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 100 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 250 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

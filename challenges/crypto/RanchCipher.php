@@ -1,7 +1,9 @@
 <?php
-	session_start();
+    session_start();
+    
+    $_SESSION['redir'] = '../../';
 
-	include '../func.php';
+	include $_SESSION['redir'].'func.php';
     
     $auth = isAuthorised(getSessionVar('username'), getSessionVar('password'));
 
@@ -15,16 +17,14 @@
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
-    <button onclick="location.href=\'../challenges.php\'" class="btn">Challenges</button> >
+    <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
     RanchCipher';
-
-    $_SESSION['redir'] = '../';
 ?>
 
-<?php include '../head.php';?>
+<?php include $_SESSION['redir'].'head.php';?>
 
 <body>
-    <?php include '../page-title.php';?>
+    <?php include $_SESSION['redir'].'page-title.php';?>
     
     <div class='challenge-holder'>
         <div class='portion-holder'>

@@ -1,7 +1,9 @@
 <?php
 	session_start();
 
-	include '../func.php';
+    $_SESSION['redir'] = '../../';
+
+	include $_SESSION['redir'].'func.php'; 
     
     $auth = isAuthorised(getSessionVar('username'), getSessionVar('password'));
 
@@ -15,16 +17,14 @@
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
-    <button onclick="location.href=\'../challenges.php\'" class="btn">Challenges</button> >
+    <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
     Runner Man 4';
-
-    $_SESSION['redir'] = '../';
 ?>
 
-<?php include '../head.php';?>
+<?php include $_SESSION['redir'].'head.php';?>
 
 <body>
-    <?php include '../page-title.php';?>
+    <?php include $_SESSION['redir'].'page-title.php';?>
     
     <div class='challenge-holder'>
         <div class='portion-holder'>
@@ -40,7 +40,7 @@
                 sources (Chrome) or debugger (Firefox). In that section you can find the JavaScript code, it is also sometimes a good idea to copy the JS
                 the HTML onto your computer so you can edit it and view it more easily.</p>
                 
-                <p>&emsp;&emsp;Can you beat my game, <a href="../challenge-site/Runner Cube 4.html">Runner Cube 4</a>? I could do it first try 
+                <p>&emsp;&emsp;Can you beat my game, <a href="<?php echo $_SESSION['redir']?>challenge-site/Runner Cube 4.html">Runner Cube 4</a>? I could do it first try 
                 (I might have to use a cheat code however).</p>
 
              </div>

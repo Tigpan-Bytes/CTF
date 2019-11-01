@@ -50,23 +50,31 @@ function draw()
             stroke(255);
             strokeWeight(1);
             rect(windowWidth * 0.3, windowHeight / 2 - 80, windowWidth * 0.4, 80);
-            //flag, ha theres no flag here but you tried to control-f didn't you. so predictable
+            //flag, ha theres no flag here but you tried to control-f didn't you. so predictable, you should try and look for where it spawns enemies
+            //because it seems to be it checks for a cheat code when it spawns the waves
             fill(255);
             noStroke();
             text('Start Game', windowWidth / 2, windowHeight / 2 - 30);
 
             if (mouseIsPressed)
             {
-                isOnMainMenu = false;
-                userName = usernameField.value();
-                usernameField.remove();
+                if (usernameField.value() != '')
+                {
+                    isOnMainMenu = false;
+                    userName = usernameField.value();
+                    usernameField.remove();
 
-                playerY = windowHeight / 2;
-                level = 0;
-                levelTime = 0;
-                cubes = [];
-                cubeTime = 1;
-                message = 'Remember, ' + userName + '. Up and Down Arrows, or W and S to move!';
+                    playerY = windowHeight / 2;
+                    level = 0;
+                    levelTime = 0;
+                    cubes = [];
+                    cubeTime = 1;
+                    message = 'Remember, ' + userName + '. Up and Down Arrows, or W and S to move!';
+                }
+                else
+                {
+                    finishMessage = 'Please input a name'
+                }
             }
         }
         else

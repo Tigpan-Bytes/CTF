@@ -63,10 +63,10 @@
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/RanchCipher.php'">
                     RanchCipher<br><span class='score'>150</span></td> <!-- caesar cypher but every character has a different offset -->
-                <td <?php if (strpos($solvedChallenges, 'Gallery') !== false) { echo "class='complete'"; }?>>
+                <td <?php if (strpos($solvedChallenges, 'Gallery') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/Gallery.php'">
                     Gallery<br><span class='score'>100</span></td> <!-- inspect some pngs with notepad to find parts of flag -->
-                <td <?php if (strpos($solvedChallenges, 'Literal Reversal') !== false) { echo "class='complete'"; }?>>
-                    Literal Reversal<br><span class='score'>200</span></td> <!-- python: slightly encrypted flag, that then has substrings of it reversed and moved around -->
+                <td <?php if (strpos($solvedChallenges, 'Literal Reversal') !== false) { echo "class='complete'"; }?>  onclick="location.href='challenges/Literal Reversal.php'">
+                    Literal Reversal<br><span class='score'>250</span></td> <!-- python: slightly encrypted flag, that then has substrings of it reversed and moved around -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'Colour Math') !== false) { echo "class='complete'"; }?>>
@@ -74,7 +74,7 @@
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?>>
                     My Little Pwnies<br><span class='score'>200</span></td> <!--4 images where corners line up to create qr code -->
                 <td <?php if (strpos($solvedChallenges, 'Unhash') !== false) { echo "class='complete'"; }?>>
-                    Unhash<br><span class='score'>250</span></td> <!-- brute force an xor hash with 2 byte salt -->
+                    Unhash<br><span class='score'>300</span></td> <!-- brute force an xor hash with 2 byte salt -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?>>

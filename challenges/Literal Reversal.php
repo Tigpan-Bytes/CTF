@@ -11,12 +11,12 @@
     }
     else
     {
-        $flagResult = checkFlag('caesar-is-the-best-salad-no-doubt', 'RanchCipher', 150);
+        $flagResult = checkFlag('justcantlose', 'Literal Reversal', 250);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\'../challenges.php\'" class="btn">Challenges</button> >
-    RanchCipher';
+    Literal Reversal';
 
     $_SESSION['redir'] = '../';
 ?>
@@ -29,20 +29,15 @@
     <div class='challenge-holder'>
         <div class='portion-holder'>
             <div class='underline'>
-                <h3 style='text-align:center;'>RanchCipher</h3>
-                <p style='text-align:center;'>Crypto • 150 points</p>
+                <h3 style='text-align:center;'>Literal Reversal</h3>
+                <p style='text-align:center;'>Reverse • 250 points</p>
             </div>
 
             <div class='underline'>
-                <p>&emsp;&emsp;Hey man my friend gave me this code, he said its a 'spin on a caesar cipher', something about different shifts per character 
-                or something... whatever that means. Anyway do you mind helping me crack it? </p>
-
-                <p>He also told me that 'a' is 0 and '-' is 26; I don't know what it means though?</p>
+                <p>&emsp;&emsp;Alright buddy, that reversal was easy peasy, try this one on for size. This one is a bit more complicated.</p>
                 
-                <code>Flag = ((-20, j), (3, d), (-19, m), (-48, y), (26, -), (7, y), (6, f), (33, o), 
-                (30, v), (40, m), (15, h), (-46, p), (-18, n), (-37, q), (50, y), (34, l), (49, n), 
-                (35, a), (5, e), (25, q), (31, e), (-16, w), (13, n), (8, l), (-36, r), (2, p), (-32, j), 
-                (-49, e), (-15, p), (22, j), (32, z), (-15, n), (-2, r))</code>
+                <p>&emsp;If you can crack the code to <a href="../challenge-site/Literal Reversal.html">this</a>, I might just have to give you
+                200 points.</p>
              </div>
 
             <form method="post">
@@ -53,7 +48,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 150 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 250 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

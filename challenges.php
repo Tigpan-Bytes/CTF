@@ -71,10 +71,10 @@
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'Colour Math') !== false) { echo "class='complete'"; }?>>
                     Colour Math<br><span class='score'>300</span></td> <!-- IRNAM final puzzle with rgb values -->
-                <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?>>
+                <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td> <!--4 images where corners line up to create qr code -->
-                <td <?php if (strpos($solvedChallenges, 'Unhash') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/Unhash.php'">
-                    Unhash<br><span class='score'>300</span></td> <!-- brute force an xor hash with 2 byte salt -->
+                <td <?php if (strpos($solvedChallenges, 'Cracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/Cracker.php'">
+                    Cracker<br><span class='score'>300</span></td> <!-- brute force an xor hash with 2 byte salt -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?>>

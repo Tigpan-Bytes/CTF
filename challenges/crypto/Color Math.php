@@ -13,7 +13,7 @@
     }
     else
     {
-        $flagResult = checkFlag('caesar-is-the-best-salad-no-doubt', 'Color Math', 300);
+        $flagResult = checkFlag('8948-1777-5992', 'Color Math', 300); //212*64-42*110 (rbbg), 97+240/30*210 (ggbr), 255*255-239*247 (rbgr)
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
@@ -38,12 +38,12 @@
                 childs play. Lets have a bit more of a fun one. The flag for this one is in the format of three, four digit numbers
                 seperated by hyphens. Example: 0000-0000-0000.</p>
 
-                <p>This puzzle has a fair number of pieces.</p>
+                <p>This puzzle has a fair number of pieces. You may want to dig deep into the core values of this puzzle.</p>
 
-                <code>Flag = ((-20, j), (3, d), (-19, m), (-48, y), (26, -), (7, y), (6, f), (33, o), 
-                (30, v), (40, m), (15, h), (-46, p), (-18, n), (-37, q), (50, y), (34, l), (49, n), 
-                (35, a), (5, e), (25, q), (31, e), (-16, w), (13, n), (8, l), (-36, r), (2, p), (-32, j), 
-                (-49, e), (-15, p), (22, j), (32, z), (-15, n), (-2, r))</code>
+                <p>&emsp;&emsp;<a href="<?php echo $_SESSION['redir']?>challenge-site/operations-keys.png" download>A</a></p>
+                <p>&emsp;&emsp;<a href="<?php echo $_SESSION['redir']?>challenge-site/operations.png" download>B</a></p>
+                <p>&emsp;&emsp;<a href="<?php echo $_SESSION['redir']?>challenge-site/values.png" download>C</a></p>
+                <p>&emsp;&emsp;<a href="<?php echo $_SESSION['redir']?>challenge-site/value-index.png" download>D</a></p>
              </div>
 
             <form method="post">
@@ -54,7 +54,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 150 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 300 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

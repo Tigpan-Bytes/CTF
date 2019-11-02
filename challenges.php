@@ -69,8 +69,8 @@
                     Literal Reversal<br><span class='score'>250</span></td> <!-- python: slightly encrypted flag, that then has substrings of it reversed and moved around -->
             </tr>
             <tr>
-                <td <?php if (strpos($solvedChallenges, 'Colour Math') !== false) { echo "class='complete'"; }?>>
-                    Colour Math<br><span class='score'>300</span></td> <!-- IRNAM final puzzle with rgb values -->
+                <td <?php if (strpos($solvedChallenges, 'Color Math') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/Color Math.php'">
+                    Color Math<br><span class='score'>300</span></td> <!-- IRNAM final puzzle with rgb values -->
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td> <!--4 images where corners line up to create qr code -->
                 <td <?php if (strpos($solvedChallenges, 'Cracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/Cracker.php'">

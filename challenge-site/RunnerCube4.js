@@ -127,7 +127,7 @@ function drawGame()
 
     textSize(16);
 
-    text('Time: ' + floor(levelTime * 10) / 10 + " / 10sec", windowWidth / 2, 96);
+    text('Time: ' + floor(levelTime * 10) / 10 + " / 7.5sec", windowWidth / 2, 96);
 
     text(message, windowWidth / 2, windowHeight - 32);
 
@@ -139,7 +139,7 @@ function drawGame()
     spawnCubes();
     moveCubes();
 
-    if (levelTime > 10)
+    if (levelTime > 7.5)
     {
         level++;
         levelTime = 0;
@@ -154,6 +154,7 @@ function drawGame()
     {
         finishMessage = 'Oof, ' + userName + '. Maybe next time?';
         openMainMenu();
+        windowResized();
     }
 }
 

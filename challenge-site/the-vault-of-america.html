@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+    @keyframes rotation {
+        0% {transform: rotate(0deg);}
+        25%, 50% {transform: rotate(180deg);}
+        75%, 100% {transform: rotate(360deg);}
+    }
+
+    @keyframes fillup {
+        0%, 10% {
+            height: 0%;
+        }
+        20%, 30%, 40%, 50%, 60% {
+            height: 100%;
+        }
+        70%, 80%, 90%, 100% {
+            height: 0%;
+        }
+    }
+
+    body {
+        background: #17212c;
+    }
+
+    .box {
+        position: relative;
+        display: inline-block;
+        left: calc(50% - 60px);
+        top: calc(50% - 60px);
+        height: 120px;
+        width: 120px;
+        margin-top: 10%;
+        border: 5px solid #FFF;
+        animation-name: rotation;
+        animation-duration: 6s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+    }
+
+    .box .filler {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: 0;
+        background: #FFF;
+        width: 100%;
+        height: 0;
+        animation-name: fillup;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+    }
+    </style>
+
+	<script src="RunnerCube4.js"></script>
+	<title> Runner Cube 4 </title>
+</head>
+<body>
+    <span class="box">
+        <span class="filler"></span>
+    </span>
+</body>
+
+</html>

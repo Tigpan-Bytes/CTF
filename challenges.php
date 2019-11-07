@@ -73,15 +73,15 @@
                     Color Math<br><span class='score'>300</span></td> <!-- IRNAM final puzzle with rgb values -->
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td> <!--4 images where corners line up to create qr code -->
-                <td <?php if (strpos($solvedChallenges, 'Cracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/Cracker.php'">
-                    Cracker<br><span class='score'>300</span></td> <!-- brute force an xor hash with 2 byte salt -->
+                <td <?php if (strpos($solvedChallenges, 'SaltedCracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/SaltedCracker.php'">
+                    SaltedCracker<br><span class='score'>300</span></td> <!-- brute force an xor hash with 2 byte salt -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/PwnaLisa.php'">
                     PwnaLisa<br><span class='score'>400</span></td>  <!-- stegenography -->
                 <td <?php if (strpos($solvedChallenges, "The 'Ess Que Elle' Needle Shop") !== false) { echo "class='complete'"; }?>>
                     The 'Ess Que Elle' Needle Shop<br><span class='score'>450</span></td>  <!-- sql injection to find flag -->
-                <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?>>
+                <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/UltraJSVault.php'">
                     UltraJSVault<br><span class='score'>400</span></td>  <!--heavily obfuscated javascript to find correct answer JSSafe -->
             </tr>
         </table>

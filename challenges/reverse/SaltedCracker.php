@@ -13,12 +13,12 @@
     }
     else
     {
-        $flagResult = checkFlag('nukes', 'Cracker', 300);
+        $flagResult = checkFlag('nukes', 'SaltedCracker', 300);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
-    Cracker';
+    SaltedCracker';
 ?>
 
 <?php include $_SESSION['redir'].'head.php';?>
@@ -29,7 +29,7 @@
     <div class='challenge-holder'>
         <div class='portion-holder'>
             <div class='underline'>
-                <h3 style='text-align:center;'>Cracker</h3>
+                <h3 style='text-align:center;'>SaltedCracker</h3>
                 <p style='text-align:center;'>Reverse • 300 points</p>
             </div>
 

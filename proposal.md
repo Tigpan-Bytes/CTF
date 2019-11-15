@@ -16,6 +16,7 @@ some of the challenges and only the best should be able to do the most complicat
  - Scoreboard on the side of the website.
  - Being able to view how many and which challenges other teams have completed.
  - Unhackable Admin page for use by me during the CTF.
+ - Having the challenges be sercure so you cannot get the flag without doing the challenges (using prepared statements and whatnot).
  
 ### Nessesary Challenges:
  - Crypto:

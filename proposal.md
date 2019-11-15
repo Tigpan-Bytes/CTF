@@ -3,7 +3,7 @@
 ## Description
 My major project is going to be a Capture the Flag (CTF) Hacking Competition. Hopefully taking place 1-3weeks before finals.
 It consists of the repositories CTF, CTF_AI_BATTLE, and CTF_ENCRYPTOR_DECRYPTOR.
-The CTF would take 1.5 - 3 hours, with many challenges and possibly an AI battle instead.
+The CTF would take 1.5 - 3 hours, with many challenges and possibly an AI battle instead of a Prog catagory
 Teams should consist of 2-4 (5 and 1 may be allowed but not encouraged), even unexperienced people should be able to complete
 some of the challenges and only the best should be able to do the most complicated. 
 

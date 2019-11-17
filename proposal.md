@@ -8,17 +8,19 @@ Teams should consist of 2-4 (5 and 1 may be allowed but not encouraged), even un
 some of the challenges and only the best should be able to do the most complicated. 
 
 ## Need To Have List
- - 4 Catagories of challenges Crypto, Forensics (A weird mixuture of actual forensics, exploitation, and web), Reverse, Prog
- - At least 4 challenges per catagory.
+ - 4 Catagories of challenges Crypto, Forensics (A weird mixuture of actual forensics, recon, exploitation, and web), Reverse, Prog
+ - At least 4 challenges per catagory. These challenges will increase in difficulty from the first 1-2 being anybody can do them. Then the last being you need to be pretty skilled to complete it.
  - An SQL database to keep track of players, teams, and challenges completed.
  - A website to access the various challenges.
+ - Ability to navigate to the various challenges and catagories of challenges.
+ - Descriptions of what each catagory is.
  - Login and Register portions of the site.
  - Scoreboard on the side of the website.
  - Being able to view how many and which challenges other teams have completed.
  - Unhackable Admin page for use by me during the CTF.
  - Having the challenges be sercure so you cannot get the flag without doing the challenges (using prepared statements and whatnot).
  
-### Nessesary Challenges:
+### Challenge Ideas:
  - Crypto:
    - One challenge about caesar cipher.
    - One about a message encoded using a different base number system.

@@ -49,4 +49,5 @@ some of the challenges and only the best should be able to do the most complicat
    - The participants would also be given a few default bots, for example they are given two: one that poorly attacks and nothing else, one that poorly collects resources and nothing else. The first expected move of the participants would be to stitch the two together (should take until the first match to understand the game and do this) then improve the bots.
    - On the website there would also extensive documentation for the API given to the participants.
  - 5 challenges per catagory (The ones added would probably be on the easy side).
+ - Timers on the site for when the CTF starts and when an AI Battle will start.
  - Sexy looking website for the CTF.

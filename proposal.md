@@ -9,7 +9,7 @@ some of the challenges and only the best should be able to do the most complicat
 
 ## Need To Have List
  - 4 Catagories of challenges Crypto, Forensics (A weird mixuture of actual forensics, recon, exploitation, and web), Reverse, Prog
- - At least 4 challenges per catagory. These challenges will increase in difficulty from the first 1-2 being anybody can do them. Then the last being you need to be pretty skilled to complete it.
+ - At least 4 challenges per catagory. These challenges will increase in difficulty from the first few being anybody can do them. Then the last being you need to be pretty skilled to complete it. I am aiming so that everyone will finish the first few, 50% of people will finish the ones in the middle, and only one or two teams will finish the last (for each catagory).
  - An SQL database to keep track of players, teams, and challenges completed.
  - A website to access the various challenges.
  - Ability to navigate to the various challenges and catagories of challenges.
@@ -46,6 +46,7 @@ some of the challenges and only the best should be able to do the most complicat
    create more units, running into or attacking enemy units will hurt/kill them, steping on an enemy base will destroy it. Last team
    standing wins.
    - The participants would also be provided a copy of the program used to run the AI Battle so they can test their creations.
+   - The participants would also be given a few default bots, for example they are given two: one that poorly attacks and nothing else, one that poorly collects resources and nothing else. The first expected move of the participants would be to stitch the two together (should take until the first match to understand the game and do this) then improve the bots.
    - On the website there would also extensive documentation for the API given to the participants.
  - 5 challenges per catagory (The ones added would probably be on the easy side).
  - Sexy looking website for the CTF.

@@ -42,7 +42,7 @@
 
             <p> <img src="map_example.png" alt="An Example 3x3 Map" align="right"> &emsp;&emsp;The map is always a pattern of repeating 32x32 tile areas.
              Where <span style='color: white;'>0,0 is in the bottom left corner</span> of the map. The number of repeating grids on
-            the x and y axis is dependant on how many AI's are able to participate.</p>
+            the x and y axis is dependant on how many AI's are able to participate. It is also important to note that the map wraps across both axis.</p>
             <p>&emsp;&emsp;In the picture there are light green squares. These are food tiles. When walked over by a bee (the diamond shaped object), they are collect for
             that colony. That colony gets 2 'food value', distributed evenly between the colony's remaining hives. A hive cannot have more than 10 'food value'.
             At some point in the turn (explained later), for each hive, if there is no bee standing on it and if its food value is greater than 0, then decrease its

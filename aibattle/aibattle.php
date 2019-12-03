@@ -35,16 +35,16 @@
                 <h2>Gameplay Overview</h2>
             </div>
 
-            <p>&emsp;&emsp; Read this to learn all the rules of the game, Bee Swarm Battle. </p>
+            <p>&emsp;&emsp; Read this to learn all the rules of the game, Bee Swarm Battle. You should <span style='color: white;'>read me first!</span> </p>
         </div>
 
         <div class='portion-holder'>
-            <div class='underline'>
+            <div class='underline' onclick="location.href='documentation.php'">
                 <h2>Documentation</h2>
             </div>
 
             <p>&emsp;&emsp; Read this to learn how to get started writing your own AI's and to use 
-            the prebuilt functions and commands to jumpstart your Bots.</p>
+            the prebuilt functions and commands to jumpstart your Bots. You should <span style='color: white;'>read me second!</span> </p>
         </div>
     </div>
 

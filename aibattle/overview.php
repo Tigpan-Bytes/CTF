@@ -44,7 +44,7 @@
              Where <span style='color: white;'>0,0 is in the bottom left corner</span> of the map. The number of repeating grids on
             the x and y axis is dependant on how many AI's are able to participate. It is also important to note that the map wraps across both axis.</p>
             <p>&emsp;&emsp;In the picture there are light green squares. These are food tiles. When walked over by a bee (the diamond shaped object), they are collect for
-            that colony. That colony gets 2 'food value', distributed evenly between the colony's remaining hives. A hive cannot have more than 10 'food value'.
+            that colony. That colony gets 2 'food value', distributed evenly between the colony's remaining hives. <span style='color: white;'>A hive cannot have more than 10 'food value'</span>.
             At some point in the turn (explained later), for each hive, if there is no bee standing on it and if its food value is greater than 0, then decrease its
             food value by one and spawn a friendly bee. If a hive is stepped on by an enemy bee, that hive is destroyed. <span style='color: white;'>Every colony starts with 2 hives, and 
             10 bees</span> (5 bees arranged around each hive in a + shape).</p>
@@ -52,24 +52,99 @@
             the colony with the highest bee count</span>. If the highest bee count is less than 80, than food is spawned every 8 turns. 
             If the highest bee count is less than 140 and greater or equal to 80, than food is spawned every 16 turns.
             Finally if the highest bee count is less than 200 and greater or equal to 140, than food is spawned every 32 turns, and if the highest bee count is greater or equal
-            to 200 then no food is spawned.
+            to 200 then no food is spawned.</p>
         </div>
 
         <div class='portion-holder'>
             <h5>The Bee</h5>
 
-            <p> The Bee has many stats and attributes associated with it. </p>
-            <p>
-            &emsp;• Index. (the id of the colony it belongs to) [.index] <br>
-            &emsp;• Position. (x,y) [.position] <br>
-            &emsp;• Health. (int from 0-6) [.health] <br>
-            &emsp;• Data. (a string that can be freely controlled by the colony to store data) [.data] <br>
-            &emsp;• Action. (a string that is used to tell the game what action the bee should take) [.action] <br>
-            &emsp;• Action Success. (a bool if the last action was successful (default True)) [.action_success] <br>
-            </p>
+            <p> &emsp;&emsp;The Bee is the only thing in the game that the AI's have direct control over. Bees can be instucted to move, attack, collect food, 
+            and they can even die. <span style='color: white;'>They also have 6 health</span> (explained later). While
+            your AI may influence your hive, they act automatically, bees are the only thing controlled directly. Bees can be commanded to take 1 of 2 actions.</p>
 
-            <p> On its turn it can do 2 different actions either Attack (A) or Move (M). </p>
-            <p> Move: A move action  </p>
+            <p> <br><br> &emsp;&emsp;<span style='color: white;'>Move:</span> A move action simply moves the bee in 1 of the 4 cardinal direction (North, South, East, or West). To execute a move action 
+            you set the bees action variable to 'M ' + (Either N, S, E, or W). For example: 'M S' would move the bot one space to the north 
+            (0 on the x axis and -1 on the y axis). Bees cannot pass through other bees. If two friendly bees attempt to move into each other, no movement 
+            occurs. <span style='color: white;'>If bees on opposite teams collide, the one with the lower
+            health will remain alive</span>. If both opposing bees have the same health, they both die. <span style='color: white;'>Bees can collect food by moving on top of it</span>.
+            </p>
+            <p> &emsp;&emsp;The AI Battle is also programmed to attempt to rectify any collisions. This means if there is any way all the bees can move along their chosen path without
+            any collisions, the game will use that pattern.</p> 
+            <p> &emsp;&emsp;An attack action will be rejected if you attempt to move into a wall, a friendly bee, or input a direction other than North, South, East, or West.</p> 
+
+            <p><br><br> &emsp;&emsp;<span style='color: white;'>Attack:</span> An attack action instructs the bee to shoot any tile in a <span style='color: white;'>range of 3</span> spaces away, regardless. In the left example the bee
+            (B) can shoot all the x tiles, but none of the . tiles. In the right example the bee can shoot all the same x tiles, even through walls (W).
+            </p>
+            <code>
+            ...x...&emsp;&emsp;&emsp;&emsp;..Wx...<br>
+            ..xxx..&emsp;&emsp;&emsp;&emsp;..Wxx..<br>
+            .xxxxx.&emsp;&emsp;&emsp;&emsp;.xWxxx.<br>
+            xxxBxxx&emsp;&emsp;&emsp;&emsp;xxWBxxx<br>
+            .xxxxx.&emsp;&emsp;&emsp;&emsp;.xWxxx.<br>
+            ..xxx..&emsp;&emsp;&emsp;&emsp;..Wxx..<br>
+            ...x...&emsp;&emsp;&emsp;&emsp;..Wx...</code>
+            <p> &emsp;&emsp;When a bee shoots another bee their health is reduced by 1. When their health reaches 0, the bee dies. 
+            <span style='color: white;'>A bee can also shoot a food to remove it off the map</span>, this should be used if the bee knows it can't collect the food
+            food but can prevent other colonies from getting it.
+            </p>
+            <p> &emsp;&emsp;To execute a attack action, you set the bees action variable to 'A ' + (the x coordiate you want to shoot) + ',' + (the y coordiate you want to shoot).
+            For example: 'A 5,3' would shoot the tile at x=5 and y=3, See the diagram (B is the attacking bee, A is the target, x is all the possible targets, assume the bottom left is 0,0).
+            </p>
+            <code>
+            .......<br>
+            ....x..<br>
+            ...xxx.<br>
+            ..xxxxA<br>
+            .xxxXxx<br>
+            ..xxxxx<br>
+            ...xxx.</code>
+            <p> &emsp;&emsp;An attack action will be rejected if it is more than 3 spaces away. However, <span style='color: white;'>friendly fire is allowed</span>, 
+            use this strategically so your bees can move into enemy bees without dying.
+            </p>
+        </div>
+
+        <div class='portion-holder'>
+            <h5>Turn Order</h5>
+
+            <p> &emsp;&emsp;Turns occur in this order. </p>
+            <p> 
+                &emsp;&emsp;&emsp; 1. Spawn Food. <br>
+                &emsp;&emsp;&emsp; 2. Get AI input (the AI's do_turn function). <br>
+                &emsp;&emsp;&emsp; 3. Attack actions. <br>
+                &emsp;&emsp;&emsp; 4. Kill low health bees. <br>
+                &emsp;&emsp;&emsp; 5. Move actions. <br>
+                &emsp;&emsp;&emsp; 6. Collect food. <br>
+                &emsp;&emsp;&emsp; 7. Destroy hives. <br>
+                &emsp;&emsp;&emsp; 8. Spawn new bees. <br><br>
+                &emsp;&emsp;&emsp; Repeat.
+            </p>
+        </div>
+
+        <div class='portion-holder'>
+            <h5>Game End</h5>
+
+            <p> &emsp;&emsp; The game ends when one of two conditions are met. </p>
+            <p> &emsp;&emsp; <span style='color: white;'>1. There is only one bot remaining.</span></p>
+            <p> &emsp;&emsp; In this situation 1st, 2nd, and 3rd are decided in the order of death. Last AI alive is 1st
+                last to die is 2nd, second last to die is 3rd.
+            </p>
+            <p> &emsp;&emsp; <span style='color: white;'>2. The turn counter reaches 750.</span></p>
+            <p> &emsp;&emsp; In this situation 1st, 2nd, and 3rd are decided according to <span style='color: white;'>points</span>.
+                Colonies start with 60 points, get 20 for destroying and enemy hive, lose 30 for having a friendly hive destroyed, get one
+                point for every 10 turns survived, and 1 point for every 4 food collected.
+            </p>
+        </div>
+
+        <div class='portion-holder'>
+            <h5>AI Loss and Termination</h5>
+
+            <p> &emsp;&emsp; An AI can lose the battle when all of their hives are destroyed. An AI can also be terminated. Being terminated means they did one of three things:</p>
+            <p> &emsp;&emsp; 1. Runtime error. When a bot encounters a runtime error it is immediatly terminated. This means the AI is killed and given 0 points, (their position in the order of death is uneffected, 
+                they act as if they just died). In the application this is shown as TERMINATED [Naughty].</p>
+            <p> &emsp;&emsp; 2. Timeout error. If your bot runs for more than <span style='color: white;'>0.5 seconds</span> it will not do any actions that turn and it will.
+                recieve 1 'time out' if a bot gets 5 'time outs' then they are terminated with the message TERMINATED [Timeout].</p>
+            <p> &emsp;&emsp; 3. Malicious Intent. If the tournament organizer deems that running your Bot is a security risk, then it will not be run 
+                and your team may be banned from participating in further Bee Swarm Battle rounds.</p>
         </div>
     </div>
 

@@ -76,6 +76,20 @@ h2 {
     cursor: pointer;
 }
 
+h5 {
+    color: white;
+    font-size: 28px;
+
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 8px;
+    margin-bottom: 0px;
+    padding-bottom: 8px;
+
+    font-family: inherit;
+    background-color: inherit;
+}
+
 h2:hover {background: #333;}
 
 .underline:after {

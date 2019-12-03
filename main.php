@@ -39,13 +39,13 @@
         </div>
 
         <div class='portion-holder'>
-            <div class='underline'>
+            <div class='underline' onclick="location.href='aibattle/aibattle.php'">
                 <h2>AI Battle</h2>
             </div>
 
             <p>&emsp;&emsp;In most CTFs for your skill level, there is typically a Misc or Prog catagory for coding
 			programs to solve specific problems. The twist for this CTF is that instead of a Prog catagory, an AI Battle is being
-			held. Each team submits their best AIs to play a simple game, every <span style='color: white;'>10mins</span> each team's most recent AI is tested against
+			held. Each team submits their best AIs to play a simple game, every <span style='color: white;'>15mins</span> each team's most recent AI is tested against
             all the other team's Bots. The team who gets <span style='color: white;'>first gets 50 points</span>, <span style='color: white;'>second gets 40 points</span>, 
             and <span style='color: white;'>third gets 30 points</span>. Each team can
 			submit AIs as often as they please, but only the most recent one is used. Everyone will have access to extensive documentation,

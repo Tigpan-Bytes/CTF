@@ -199,7 +199,7 @@
             <p> &emsp;&emsp;breadth_path will return an object called a <a href="https://www.w3schools.com/python/python_dictionaries.asp">Dictionary</a>. </p>
             
             <code>
-            # move_bee_toward_five sets the action of the give bee to move toward the Position(5,5) using breadth_path<br>
+            # move_bee_toward_five sets the action of the given bee to move toward the Position(5,5) using breadth_path<br>
             <br>
             class AI: <br>
             <br>
@@ -213,6 +213,46 @@
             &emsp;&emsp;&emsp;&emsp;# run it once for every time this function is called. <br>
             <br>
             &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path[bee.position]<br>
+            </code>
+            
+        </div>
+        <div class='underline'>
+
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.breadth_search</span>(<span style='color: white;'>start</span> [Position], 
+            <span style='color: white;'>target_func</span> [Function], 
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)],
+                <span style='color: white;'>get_all_options</span> [Bool (Optional: Default = False)])</span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_path(start, target_func, max_distance=Infinity, get_all_options=False)</span></span></p>
+
+            <p> &emsp;&emsp;breadth_search will start at the start position and find the closest tile that meets the target_func criteria. It also moves around walls. 
+                breadth_search returns a MovePosition class.</p>
+
+            <p>
+                &emsp;&emsp;&emsp;&emsp;&emsp; <span style='color: white; font-size: 24px;'>MovePosition Class</span> <br>
+                &emsp;&emsp;&emsp; • world.x [Int] (The x corrdinate of the target tile) <br>
+                &emsp;&emsp;&emsp; • world.y [Int] (The y corrdinate of the target tile) <br>
+                &emsp;&emsp;&emsp; • world.direction [Int] (The path needed to reach the target, ex. 'SSSEEESESEEEEEEENENNNNNWNWNW') <br>
+            <p>
+
+            <p> &emsp;&emsp;If you enable get_all_options then instead of stopping at the first tile that meets the criteria it will return them all.</p>
+            
+            <code>
+            # move_bee_home sets the action of the given bee to move toward the nearest friendly hive<br>
+            <br>
+            class AI: <br>
+            <br>
+            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            <br>
+            &emsp;&emsp;def is_tile_home(self, position, distance): <br>
+            &emsp;&emsp;&emsp;&emsp;tile = self.world.get_tile(position.x, position.y) <br>
+            &emsp;&emsp;&emsp;&emsp;return tile.hive and tile.hive_index == self.index <br>
+            <br>
+            &emsp;&emsp;def move_bee_home(self, bee): # You need include self as a parameter for all functions in your AI<br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;path = self.world.breadth_search(bee.position, self.is_tile_home)<br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path.direction[0]<br>
+            &emsp;&emsp;&emsp;&emsp;# Uses the first direction in the list to move
             </code>
             
         </div>

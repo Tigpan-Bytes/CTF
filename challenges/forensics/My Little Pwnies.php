@@ -16,7 +16,7 @@
         $flagResult = checkFlag('Fr13nD5hIP', 'My Little Pwnies', 200);
     }
 
-    $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
+    $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
     My Little Pwnies';
 ?>

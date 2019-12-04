@@ -23,7 +23,7 @@
     <?php include $_SESSION['redir'].'page-title.php';?>
     
     <div class='main-holder'>
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>CTF: Bee Swarm Battle</h5>
 
             <p>&emsp;&emsp; Bee Swarm Battle is similar to the Real Time Strategy genre. It is a multiplayer, simultaneous-turns 
@@ -36,7 +36,7 @@
             and <span style='color: white;'>third gets 30 points</span></p>
         </div>
 
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>Map, Food, and Hives</h5>
 
 
@@ -55,7 +55,7 @@
             to 200 then no food is spawned.</p>
         </div>
 
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>The Bee</h5>
 
             <p> &emsp;&emsp;The Bee is the only thing in the game that the AI's have direct control over. Bees can be instucted to move, attack, collect food, 
@@ -103,7 +103,7 @@
             </p>
         </div>
 
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>Turn Order</h5>
 
             <p> &emsp;&emsp;Turns occur in this order. </p>
@@ -120,7 +120,7 @@
             </p>
         </div>
 
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>Game End</h5>
 
             <p> &emsp;&emsp; The game ends when one of two conditions are met. </p>
@@ -135,7 +135,7 @@
             </p>
         </div>
 
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>AI Loss and Termination</h5>
 
             <p> &emsp;&emsp; An AI can lose the battle when all of their hives are destroyed. An AI can also be terminated. Being terminated means they did one of three things:</p>

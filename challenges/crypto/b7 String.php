@@ -16,7 +16,7 @@
         $flagResult = checkFlag('well-done-you-are-now-a-member-of-the-pwn-patrol---welcome-to-the-force-sir', 'b7 String', 100);
     }
 
-    $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
+    $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
     b7 String';
 ?>

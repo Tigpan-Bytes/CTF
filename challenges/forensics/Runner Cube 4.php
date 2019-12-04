@@ -16,7 +16,7 @@
         $flagResult = checkFlag('sh0u1d.h4ve.b3at.1t.l1g1t', 'Runner Cube 4', 100);
     }
 
-    $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
+    $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
     Runner Man 4';
 ?>

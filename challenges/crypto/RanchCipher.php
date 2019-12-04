@@ -16,7 +16,7 @@
         $flagResult = checkFlag('caesar-is-the-best-salad-no-doubt', 'RanchCipher', 150);
     }
 
-    $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
+    $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
     RanchCipher';
 ?>

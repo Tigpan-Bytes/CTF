@@ -23,7 +23,7 @@
     <?php include $_SESSION['redir'].'page-title.php';?>
     
     <div class='main-holder'>
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>Getting Started</h5>
 
             <p>&emsp;&emsp; To get started writing an AI for Bee Swarm Battle first go back to the AI Battle section of this webpage to 'Download AI Kit',
@@ -43,13 +43,13 @@
             </p>
         </div>
 
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>Position</h5>
 
             <p> The position of everything in Bee Swarm Battle is stored using the Position type. It has these variables and constuctors. </p>
 
             <p>
-                &emsp;&emsp;&emsp;&emsp;&emsp; <span style='color: white;'>Position</span> <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp; <span style='color: white; font-size: 24px;'>Position</span> <br>
                 &emsp;&emsp;&emsp; • position.x [Int] (The x coordinate) <br>
                 &emsp;&emsp;&emsp; • position.y [Int] (The y coordinate) <br>
                 &emsp;&emsp;&emsp; • CONSTRUCTOR: position = Position(x,y) (creates a new position variable with the variables x and y) <br>
@@ -77,14 +77,14 @@
             </code>
         </div>
 
-        <div class='portion-holder'>
+        <div class='underline'>
             <h5>Tiles</h5>
 
-            <p> Every single square on the.</p>
-            <p> The World also conains a 2d array of Tile objects. Every tile class has these variable.</p>
+            <p> &emsp;&emsp;Every single square on the map has a Tile object associated with it.</p>
+            <p> &emsp;&emsp;The World object (explained later) also conains a 2d array of Tile objects. Every tile class has these variable.</p>
 
             <p>
-                &emsp;&emsp;&emsp;&emsp;&emsp; <span style='color: white;'>Tile Class</span> <br>
+                &emsp;&emsp;&emsp;&emsp;&emsp; <span style='color: white; font-size: 24px;'>Tile Class</span> <br>
                 &emsp;&emsp;&emsp; • tile.walkable [Bool] (True if the tile has no wall, false if it contains a wall) <br>
                 &emsp;&emsp;&emsp; • tile.hive [Bool] (True if the tile contains a hive) <br>
                 &emsp;&emsp;&emsp; • tile.was_hive [Bool] (True if the tile ever contained a hive) <br>
@@ -94,7 +94,7 @@
                 &emsp;&emsp;&emsp; • tile.bee [Bee Object] (The bee object that is on this tile, None if there is no bee on the tile) <br>
             <p>
 
-            <p> For example: </p>
+            <p> &emsp;&emsp;For example: </p>
             <code>
             # This code creates a function that takes in a tile, then prints 'FOOD' if it contains food, and 'HIVE' if it contains a hive<br>
              <br>
@@ -104,6 +104,117 @@
             &emsp;&emsp;if tile.hive: <br>
             &emsp;&emsp;&emsp;&emsp;print('HIVE') <br>
             </code>
+
+            <p> &emsp;&emsp;You can create new instances of tile but there is no reason to. If you want to you can dig around in the class_data file to find it. </p>
+        </div>
+
+        <div class='underline'>
+            <h5>World</h5>
+
+            <p> &emsp;&emsp;Every AI is also given a World object shortly after being created. This world object contains all the data for the map.
+            The World also conains a 2d array of Tile objects. Every World class has these variable.</p>
+
+            <p>
+                &emsp;&emsp;&emsp;&emsp;&emsp; <span style='color: white; font-size: 24px;'>World Class</span> <br>
+                &emsp;&emsp;&emsp; • world.width [Int] (The width of the world (x size)) <br>
+                &emsp;&emsp;&emsp; • world.height [Int] (The height of the world (y size)) <br>
+                &emsp;&emsp;&emsp; • world.half_width [Int] (Half of the width of the world) <br>
+                &emsp;&emsp;&emsp; • world.half_height [Int] (Half of the height of the world) <br>
+                &emsp;&emsp;&emsp; • world.tiles [2d array of Tiles] (The tiles for every map) <br>
+            <p>
+
+            <p> &emsp;&emsp;In addition to those variable the World also has many useful built in functions to help you:</p>
+            
+        </div>
+        <div class='underline'>
+
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.get_tile</span>(<span style='color: white;'>x</span> [Int], 
+                <span style='color: white;'>y</span> [Int])</span></p>
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_tile(x, y)</span></span></p>
+
+            <p> &emsp;&emsp;This function returns the tile object at the x, y coordinates specified. You could directly access world.tiles[x][y], but this is easier and more fool proof.</p>
+            <code>
+            # This code checks if the tile to the north of a bee contains food and prints 'FOOD TO NORTH' if it does<br>
+             <br>
+            class AI: <br>
+            <br>
+            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            <br>
+            &emsp;&emsp;def check_north_of_bee(self, bee): <br>
+            &emsp;&emsp;&emsp;&emsp;# You need include self as a parameter for all functions in your AI <br>
+            &emsp;&emsp;&emsp;&emsp;tile = self.world.get_tile(bee.x, bee.y + 1) <br>
+            &emsp;&emsp;&emsp;&emsp;if tile.food: <br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print('FOOD TO NORTH') <br>
+            </code>
+
+        </div>
+        <div class='underline'>
+
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.get_x_in_range</span>(<span style='color: white;'>start</span> [Position], 
+                <span style='color: white;'>target_func</span> [Function], 
+                <span style='color: white;'>max_distance</span> [Int],
+                <span style='color: white;'>sort_func</span> [Function (Optional: Default = None)])</span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_x_in_range(start, target_func, max_distance, sort_func=None)</span></span></p>
+
+            <p> &emsp;&emsp;This function is an easy way to get a list of all the things that meet the target criteria in a certain range. 
+                For example if you run get_x_in_range with a range of 3, you will access the exact same tiles as the range of an attacking bee.</p>
+            <p> &emsp;&emsp;All target functions (for every function that uses them) must have 2 parameters (other than self), position, then distance. Position
+                is the Position variable of the tile being checked and distance is the distance to the start.</p>
+            <code>
+            # get_sorted_walls returns a list of all walls within a range of 5 to a bee, then sorts then by their distance to the bee (closest first)<br>
+             <br>
+            class AI: <br>
+            <br>
+            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            <br>
+            &emsp;&emsp;def is_cell_walled(self, position, distance): <br>
+            &emsp;&emsp;&emsp;&emsp;# Target and sort functions must have 2 parametes, position then distance <br>
+            &emsp;&emsp;&emsp;&emsp;return not self.world.get_tile(position.x, position.y).walkable # All not walkable tiles are walled <br>
+            <br>
+            &emsp;&emsp;def sort_walls(self, position, distance): # Even sort functions must have position then distance <br>
+            &emsp;&emsp;&emsp;&emsp;return distance # The sort algorithim sorts lowest to highest (lowest is index 0) <br>
+            <br>
+            &emsp;&emsp;def get_sorted_walls(self, bee): # You need include self as a parameter for all functions in your AI <br>
+            &emsp;&emsp;&emsp;&emsp;# You don't need to call the parameters of the target and sort functions, <br>
+            &emsp;&emsp;&emsp;&emsp;# get_x_in_range does that on its own. <br>
+            &emsp;&emsp;&emsp;&emsp;return self.world.get_x_in_range(bee.position, self.is_cell_walled, 5, self.sort_walls) <br>
+            </code>
+
+        </div>
+        <div class='underline'>
+
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.breadth_path</span>(<span style='color: white;'>start</span> [Position or Position Array], 
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)])</span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_path(start, max_distance=Infinity)</span></span></p>
+
+            <p> &emsp;&emsp;breadth_path creates a map of all the cardinal directions (N, S, E, W) needed to reach the start(s) in the fastest time. Example: breadth_path was used to create a list of directions to the target (T), and it avoids walls (X).</p>
+            <code>
+            <span style='color: grey;'>XXX</span>SSSSSSSS <br>
+            <span style='color: grey;'>XX</span>EEEEEEESS <br>
+            EENEN<span style='color: grey;'>XXX</span>SSS <br>
+            <span style='color: grey;'>X</span>EEN<span style='color: grey;'>XX</span>EEE<span style='color: white;'>T</span>W <br>
+            <span style='color: grey;'>X</span>NN<span style='color: grey;'>XXXXXXX</span>N <br>
+            <span style='color: grey;'>XX</span>ES<span style='color: grey;'>XXXX</span>EEN <br>
+            <span style='color: grey;'>XXX</span>EEEEEENN <br>
+            <p> &emsp;&emsp;breadth_path will return an object called a <a href="https://www.w3schools.com/python/python_dictionaries.asp">Dictionary</a>. </p>
+            
+            <code>
+            # move_bee_toward_five sets the action of the give bee to move toward the Position(5,5) using breadth_path<br>
+            <br>
+            class AI: <br>
+            <br>
+            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            <br>
+            &emsp;&emsp;def move_bee_toward_five(self, bee): # You need include self as a parameter for all functions in your AI<br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;path = self.world.breadth_path(Position(5,5))<br>
+            &emsp;&emsp;&emsp;&emsp;# In practice it would be better to store this 'path' in your AI as a self variable, <br>
+            &emsp;&emsp;&emsp;&emsp;# because you shouldn't have to run this function every time. Instead you can <br>
+            &emsp;&emsp;&emsp;&emsp;# run it once for every time this function is called. <br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path[bee.position]<br>
+            </code>
+            
         </div>
     </div>
 

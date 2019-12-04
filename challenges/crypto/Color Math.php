@@ -16,7 +16,7 @@
         $flagResult = checkFlag('8948-1777-5992', 'Color Math', 300); //212*64-42*110 (rbbg), 97+240/30*210 (ggbr), 255*255-239*247 (rbgr)
     }
 
-    $_SESSION['titlePath'] = '<button onclick="location.href=\'main.php\'" class="btn">Main</button> > 
+    $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
     RanchCipher';
 ?>

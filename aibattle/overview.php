@@ -76,13 +76,13 @@
             (B) can shoot all the x tiles, but none of the . tiles. In the right example the bee can shoot all the same x tiles, even through walls (W).
             </p>
             <code>
-            ...x...&emsp;&emsp;&emsp;&emsp;..Wx...<br>
-            ..xxx..&emsp;&emsp;&emsp;&emsp;..Wxx..<br>
-            .xxxxx.&emsp;&emsp;&emsp;&emsp;.xWxxx.<br>
-            xxxBxxx&emsp;&emsp;&emsp;&emsp;xxWBxxx<br>
-            .xxxxx.&emsp;&emsp;&emsp;&emsp;.xWxxx.<br>
-            ..xxx..&emsp;&emsp;&emsp;&emsp;..Wxx..<br>
-            ...x...&emsp;&emsp;&emsp;&emsp;..Wx...</code>
+            ...x...&emsp;&emsp;&emsp;&emsp;...x...<br>
+            ..xxx..&emsp;&emsp;&emsp;&emsp;..xxx..<br>
+            .xxxxx.&emsp;&emsp;&emsp;&emsp;<span style='color: #666;'>WWWWWWW</span><br>
+            xxxBxxx&emsp;&emsp;&emsp;&emsp;xxxBxxx<br>
+            .xxxxx.&emsp;&emsp;&emsp;&emsp;.xxxxx.<br>
+            ..xxx..&emsp;&emsp;&emsp;&emsp;..xxx..<br>
+            ...x...&emsp;&emsp;&emsp;&emsp;...x...</code>
             <p> &emsp;&emsp;When a bee shoots another bee their health is reduced by 1. When their health reaches 0, the bee dies. 
             <span style='color: white;'>A bee can also shoot a food to remove it off the map</span>, this should be used if the bee knows it can't collect the food
             food but can prevent other colonies from getting it.

@@ -29,7 +29,7 @@
             <p>&emsp;&emsp; To get started writing an AI for Bee Swarm Battle first go back to the AI Battle section of this webpage to 'Download AI Kit',
                 this will navigate you to a public github repository. Download it.
             </p>
-            <p>&emsp;&emsp; When it is downloaded you <span style='color: white;'>first must install pygame</span>, you can do this in thonny easily by 
+            <p>&emsp;&emsp; When it is downloaded you <span style='color: white;'>first must install the Python module pygame</span>, you can do this in thonny easily by 
                 going to Tools > Manage Packages, then search for pygame and install. Then you can run main.py. You will notice the game starts with 3 bots.
                 These are the default bots, you may use code from them to construct your own AI, you may even submit the entire thing yourself (they won't do that well).
                 It is strongly recommended that you read and look through these bots to help you learn. You should also take the best parts of each bot and put
@@ -68,7 +68,7 @@
             print(str(c.x) + ', ' + str(c.y)) <span style='color: #666;'>#prints '5, 9'</span> <br>
             </code>
 
-            <p> It is also important to note that Position is immutable, this means you cannot change parts of it without changing all of it. Example: </p>
+            <p> It is also important to note that Position is immutable (it is a NamedTuple (don't worry if you don't know what this means)), this means you cannot change parts of it without changing all of it. Example: </p>
             <code>
             a = Position(some_x, some_y) <br>
              <br>

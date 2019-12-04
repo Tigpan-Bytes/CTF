@@ -68,7 +68,13 @@
             print(str(c.x) + ', ' + str(c.y)) #prints '5, 9' <br>
             </code>
 
-            <p> It is also important to note that you cannot change . </p>
+            <p> It is also important to note that Position is immutable, this means you cannot change parts of it without changing all of it. Example: </p>
+            <code>
+            a = Position(some_x, some_y) <br>
+             <br>
+            a.x = 5 # THIS WILL ERROR <br>
+            a = Position(5, a.y) # This is correct and will not error<br>
+            </code>
         </div>
 
         <div class='portion-holder'>

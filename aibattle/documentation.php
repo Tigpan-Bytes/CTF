@@ -57,23 +57,23 @@
 
             <p> For example: </p>
             <code>
-            # This code creates 2 different positition variable <br>
+            <span style='color: #666;'># This code creates 2 different positition variable <br>
             # Then creates a third one with the sum of the others positions <br>
-            # Then prints the contents of the third Position <br>
+            # Then prints the contents of the third Position</span> <br>
              <br>
             a = Position(4,2) <br>
             b = Position(1,7) <br>
             c = Position(a.x + b.x, a.y + b.y) <br>
              <br>
-            print(str(c.x) + ', ' + str(c.y)) #prints '5, 9' <br>
+            print(str(c.x) + ', ' + str(c.y)) <span style='color: #666;'>#prints '5, 9'</span> <br>
             </code>
 
             <p> It is also important to note that Position is immutable, this means you cannot change parts of it without changing all of it. Example: </p>
             <code>
             a = Position(some_x, some_y) <br>
              <br>
-            a.x = 5 # THIS WILL ERROR <br>
-            a = Position(5, a.y) # This is correct and will not error<br>
+            a.x = 5 <span style='color: #666;'># THIS WILL ERROR</span> <br>
+            a = Position(5, a.y) <span style='color: #666;'># This is correct and will not error</span><br>
             </code>
         </div>
 
@@ -96,7 +96,7 @@
 
             <p> &emsp;&emsp;For example: </p>
             <code>
-            # This code creates a function that takes in a tile, then prints 'FOOD' if it contains food, and 'HIVE' if it contains a hive<br>
+            <span style='color: #666;'># This code creates a function that takes in a tile, then prints 'FOOD' if it contains food, and 'HIVE' if it contains a hive</span><br>
              <br>
             def check_tile(tile): <br>
             &emsp;&emsp;if tile.food: <br>
@@ -130,18 +130,18 @@
 
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.get_tile</span>(<span style='color: white;'>x</span> [Int], 
                 <span style='color: white;'>y</span> [Int])</span></p>
-            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_tile(x, y)</span></span></p>
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_tile(x, y)</span></p>
 
             <p> &emsp;&emsp;This function returns the tile object at the x, y coordinates specified. You could directly access world.tiles[x][y], but this is easier and more fool proof.</p>
             <code>
-            # This code checks if the tile to the north of a bee contains food and prints 'FOOD TO NORTH' if it does<br>
+            <span style='color: #666;'># This code checks if the tile to the north of a bee contains food and prints 'FOOD TO NORTH' if it does</span><br>
              <br>
             class AI: <br>
             <br>
-            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            &emsp;&emsp;... <span style='color: #666;'># other code goes here, such as __init__ and do_turn</span> <br>
             <br>
             &emsp;&emsp;def check_north_of_bee(self, bee): <br>
-            &emsp;&emsp;&emsp;&emsp;# You need include self as a parameter for all functions in your AI <br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># You need include self as a parameter for all functions in your AI</span> <br>
             &emsp;&emsp;&emsp;&emsp;tile = self.world.get_tile(bee.x, bee.y + 1) <br>
             &emsp;&emsp;&emsp;&emsp;if tile.food: <br>
             &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print('FOOD TO NORTH') <br>
@@ -154,29 +154,29 @@
                 <span style='color: white;'>target_func</span> [Function], 
                 <span style='color: white;'>max_distance</span> [Int],
                 <span style='color: white;'>sort_func</span> [Function (Optional: Default = None)])</span></p>
-                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_x_in_range(start, target_func, max_distance, sort_func=None)</span></span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_x_in_range(start, target_func, max_distance, sort_func=None)</span></p>
 
             <p> &emsp;&emsp;This function is an easy way to get a list of all the things that meet the target criteria in a certain range. 
                 For example if you run get_x_in_range with a range of 3, you will access the exact same tiles as the range of an attacking bee.</p>
             <p> &emsp;&emsp;All target functions (for every function that uses them) must have 2 parameters (other than self), position, then distance. Position
                 is the Position variable of the tile being checked and distance is the distance to the start.</p>
             <code>
-            # get_sorted_walls returns a list of all walls within a range of 5 to a bee, then sorts then by their distance to the bee (closest first)<br>
+            <span style='color: #666;'># get_sorted_walls returns a list of all walls within a range of 5 to a bee, then sorts then by their distance to the bee (closest first)</span><br>
              <br>
             class AI: <br>
             <br>
-            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            &emsp;&emsp;... <span style='color: #666;'># other code goes here, such as __init__ and do_turn</span> <br>
             <br>
             &emsp;&emsp;def is_cell_walled(self, position, distance): <br>
-            &emsp;&emsp;&emsp;&emsp;# Target and sort functions must have 2 parametes, position then distance <br>
-            &emsp;&emsp;&emsp;&emsp;return not self.world.get_tile(position.x, position.y).walkable # All not walkable tiles are walled <br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># Target and sort functions must have 2 parametes, position then distance</span> <br>
+            &emsp;&emsp;&emsp;&emsp;return not self.world.get_tile(position.x, position.y).walkable <span style='color: #666;'># All not walkable tiles are walled</span> <br>
             <br>
-            &emsp;&emsp;def sort_walls(self, position, distance): # Even sort functions must have position then distance <br>
-            &emsp;&emsp;&emsp;&emsp;return distance # The sort algorithim sorts lowest to highest (lowest is index 0) <br>
+            &emsp;&emsp;def sort_walls(self, position, distance): <span style='color: #666;'># Even sort functions must have position then distance</span> <br>
+            &emsp;&emsp;&emsp;&emsp;return distance <span style='color: #666;'># The sort algorithim sorts lowest to highest (lowest is index 0)</span> <br>
             <br>
-            &emsp;&emsp;def get_sorted_walls(self, bee): # You need include self as a parameter for all functions in your AI <br>
-            &emsp;&emsp;&emsp;&emsp;# You don't need to call the parameters of the target and sort functions, <br>
-            &emsp;&emsp;&emsp;&emsp;# get_x_in_range does that on its own. <br>
+            &emsp;&emsp;def get_sorted_walls(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span> <br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># You don't need to call the parameters of the target and sort functions, <br>
+            &emsp;&emsp;&emsp;&emsp;# get_x_in_range does that on its own.</span> <br>
             &emsp;&emsp;&emsp;&emsp;return self.world.get_x_in_range(bee.position, self.is_cell_walled, 5, self.sort_walls) <br>
             </code>
 
@@ -185,32 +185,32 @@
 
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.breadth_path</span>(<span style='color: white;'>start</span> [Position or Position Array], 
                 <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)])</span></p>
-                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_path(start, max_distance=Infinity)</span></span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_path(start, max_distance=Infinity)</span></p>
 
             <p> &emsp;&emsp;breadth_path creates a map of all the cardinal directions (N, S, E, W) needed to reach the start(s) in the fastest time. Example: breadth_path was used to create a list of directions to the target (T), and it avoids walls (X).</p>
             <code>
-            <span style='color: grey;'>XXX</span>SSSSSSSS <br>
-            <span style='color: grey;'>XX</span>EEEEEEESS <br>
-            EENEN<span style='color: grey;'>XXX</span>SSS <br>
-            <span style='color: grey;'>X</span>EEN<span style='color: grey;'>XX</span>EEE<span style='color: white;'>T</span>W <br>
-            <span style='color: grey;'>X</span>NN<span style='color: grey;'>XXXXXXX</span>N <br>
-            <span style='color: grey;'>XX</span>ES<span style='color: grey;'>XXXX</span>EEN <br>
-            <span style='color: grey;'>XXX</span>EEEEEENN <br>
+            <span style='color: #666;'>XXX</span>SSSSSSSS <br>
+            <span style='color: #666;'>XX</span>EEEEEEESS <br>
+            EENEN<span style='color: #666;'>XXX</span>SSS <br>
+            <span style='color: #666;'>X</span>EEN<span style='color: #666;'>XX</span>EEE<span style='color: white;'>T</span>W <br>
+            <span style='color: #666;'>X</span>NN<span style='color: #666;'>XXXXXXX</span>N <br>
+            <span style='color: #666;'>XX</span>ES<span style='color: #666;'>XXXX</span>EEN <br>
+            <span style='color: #666;'>XXX</span>EEEEEENN <br>
             <p> &emsp;&emsp;breadth_path will return an object called a <a href="https://www.w3schools.com/python/python_dictionaries.asp">Dictionary</a>. </p>
             
             <code>
-            # move_bee_toward_five sets the action of the given bee to move toward the Position(5,5) using breadth_path<br>
+            <span style='color: #666;'># move_bee_toward_five sets the action of the given bee to move toward the Position(5,5) using breadth_path</span><br>
             <br>
             class AI: <br>
             <br>
-            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            &emsp;&emsp;... <span style='color: #666;'># other code goes here, such as __init__ and do_turn</span> <br>
             <br>
-            &emsp;&emsp;def move_bee_toward_five(self, bee): # You need include self as a parameter for all functions in your AI<br>
+            &emsp;&emsp;def move_bee_toward_five(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
             <br>
             &emsp;&emsp;&emsp;&emsp;path = self.world.breadth_path(Position(5,5))<br>
-            &emsp;&emsp;&emsp;&emsp;# In practice it would be better to store this 'path' in your AI as a self variable, <br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># In practice it would be better to store this 'path' in your AI as a self variable, <br>
             &emsp;&emsp;&emsp;&emsp;# because you shouldn't have to run this function every time. Instead you can <br>
-            &emsp;&emsp;&emsp;&emsp;# run it once for every time this function is called. <br>
+            &emsp;&emsp;&emsp;&emsp;# run it once for every time this function is called because the path never changes.</span> <br>
             <br>
             &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path[bee.position]<br>
             </code>
@@ -219,10 +219,10 @@
         <div class='underline'>
 
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.breadth_search</span>(<span style='color: white;'>start</span> [Position], 
-            <span style='color: white;'>target_func</span> [Function], 
+                <span style='color: white;'>target_func</span> [Function], 
                 <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)],
                 <span style='color: white;'>get_all_options</span> [Bool (Optional: Default = False)])</span></p>
-                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_path(start, target_func, max_distance=Infinity, get_all_options=False)</span></span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_search(start, target_func, max_distance=Infinity, get_all_options=False)</span></p>
 
             <p> &emsp;&emsp;breadth_search will start at the start position and find the closest tile that meets the target_func criteria. It also moves around walls. 
                 breadth_search returns a MovePosition class.</p>
@@ -241,20 +241,120 @@
             <br>
             class AI: <br>
             <br>
-            &emsp;&emsp;... # other code goes here, such as __init__ and do_turn <br>
+            &emsp;&emsp;... <span style='color: #666;'># other code goes here, such as __init__ and do_turn</span> <br>
             <br>
             &emsp;&emsp;def is_tile_home(self, position, distance): <br>
             &emsp;&emsp;&emsp;&emsp;tile = self.world.get_tile(position.x, position.y) <br>
             &emsp;&emsp;&emsp;&emsp;return tile.hive and tile.hive_index == self.index <br>
             <br>
-            &emsp;&emsp;def move_bee_home(self, bee): # You need include self as a parameter for all functions in your AI<br>
+            &emsp;&emsp;def move_bee_home(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
             <br>
             &emsp;&emsp;&emsp;&emsp;path = self.world.breadth_search(bee.position, self.is_tile_home)<br>
             <br>
             &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path.direction[0]<br>
-            &emsp;&emsp;&emsp;&emsp;# Uses the first direction in the list to move
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># Uses the first direction in the list to move</span>
             </code>
             
+        </div>
+        <div class='underline'>
+
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.depth_search</span>(<span style='color: white;'>start</span> [Position], 
+                <span style='color: white;'>target</span> [Position], 
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)])</span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.depth_search(start, target, max_distance=5318008)</span></p>
+
+            <p> &emsp;&emsp;depth_search is much MUCH faster than breadth_search, however it requires that you know the exact position of the
+             target; because of this it is rarely used.</p>
+
+            <p> &emsp;&emsp;depth_search returns a MovePosition class much like breadth_search.</p>
+            
+            <code>
+            <span style='color: #666;'># move_bee_ten sets the action of the given bee to move toward the position (10,10)</span><br>
+            <br>
+            class AI: <br>
+            <br>
+            &emsp;&emsp;... <span style='color: #666;'># other code goes here, such as __init__ and do_turn</span> <br>
+            <br>
+            &emsp;&emsp;def move_bee_ten(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;path = self.world.depth_search(bee.position, Position(10, 10))<br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path.direction[0]<br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># Uses the first direction in the list to move</span> <br>
+            </code>
+            
+        </div>
+        <div class='underline'>
+
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.directed_breadth_search</span>(<span style='color: white;'>start</span> [Position], 
+                <span style='color: white;'>wall_func</span> [Function], 
+                <span style='color: white;'>target_func</span> [Function], 
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)],
+                <span style='color: white;'>get_all_options</span> [Bool (Optional: Default = False)])</span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.directed_breadth_search(start, wall_func, target_func, max_distance=Infinity, get_all_options=False)</span></p>
+
+            <p> &emsp;&emsp;directed_breadth_search functions incredibly similarly to breadth_search, the only difference is instead of using
+                if that tile.walkable to determine if a cell can be walked through, you can use anything else you want. This is helpful if you
+                want to avoid bumping into friendly units.</p>
+
+            <code>
+            <span style='color: #666;'># move_bee_home_avoid sets the action of the given bee to move toward the nearest friendly hive while avoiding all food</span><br>
+            <br>
+            class AI: <br>
+            <br>
+            &emsp;&emsp;... <span style='color: #666;'># other code goes here, such as __init__ and do_turn</span> <br>
+            <br>
+            &emsp;&emsp;def is_tile_home(self, position, distance): <br>
+            &emsp;&emsp;&emsp;&emsp;tile = self.world.get_tile(position.x, position.y) <br>
+            &emsp;&emsp;&emsp;&emsp;return tile.hive and tile.hive_index == self.index <br>
+            <br>
+            &emsp;&emsp;def is_tile_food(self, position, distance): <br>
+            &emsp;&emsp;&emsp;&emsp;tile = self.world.get_tile(position.x, position.y) <br>
+            &emsp;&emsp;&emsp;&emsp;return not tile.walkable and not.tile.food <br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># Should return true if you should search through it</span> <br>
+            <br>
+            &emsp;&emsp;def move_bee_home(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;path = self.world.directed_breadth_search(bee.position, self.is_tile_food, self.is_tile_home)<br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path.direction[0]<br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># Uses the first direction in the list to move</span>
+            </code>
+            
+        </div>
+        <div class='underline'>
+
+            <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.directed_depth_search</span>(<span style='color: white;'>start</span> [Position], 
+                <span style='color: white;'>wall_func</span> [Function], 
+                <span style='color: white;'>target</span> [Position], 
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)])</span></p>
+                <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.directed_depth_search(start, wall_func, target, max_distance=5318008)</span></p>
+
+            <p> &emsp;&emsp;directed_depth_search also functions in the same way as directed_breadth_search.</p>
+            
+            <code>
+            <span style='color: #666;'># move_bee_ten_avoid sets the action of the given bee to move toward the position (10,10) while avoiding food</span><br>
+            <br>
+            class AI: <br>
+            <br>
+            &emsp;&emsp;... <span style='color: #666;'># other code goes here, such as __init__ and do_turn</span> <br>
+            <br>
+            &emsp;&emsp;def is_tile_food(self, position, distance): <br>
+            &emsp;&emsp;&emsp;&emsp;return self.world.get_tile(position.x, position.y).food <br>
+            <br>
+            &emsp;&emsp;def move_bee_ten(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;path = self.world.directed_depth_search(bee.position, self.is_tile_food, Position(10, 10))<br>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;bee.action = 'M ' + path.direction[0]<br>
+            &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># Uses the first direction in the list to move</span>
+            </code>
+            
+        </div>
+        <div class='underline'>
+            <h5>Afterword</h5>
+
+            <p>&emsp;&emsp; There are more functions and built-in classes for you to use, try reading some of the code to find them. <span style='color: white;'>Good Luck!</span></p>
         </div>
     </div>
 

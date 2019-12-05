@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+    @keyframes rotation {
+        0% {transform: rotate(0deg);}
+        25%, 50% {transform: rotate(180deg);}
+        75%, 100% {transform: rotate(360deg);}
+    }
+
+    @keyframes fillup {
+        0%, 10% {
+            height: 0%;
+        }
+        20%, 30%, 40%, 50%, 60% {
+            height: 100%;
+        }
+        70%, 80%, 90%, 100% {
+            height: 0%;
+        }
+    }
+
+    body {
+        background: #17212c;
+    }
+
+    h1 {
+        display: inline;
+        position: relative;
+        font: 64px Helvetica, Sans-Serif;
+        color: rgba(0, 255, 136, 0.5); 
+    }
+
+    h1:after {
+        content: "Can you crack the code?";
+        position: absolute; left: 5px; top: 2px;
+        color: rgba(255,120,200,0.5);   
+    }
+
+    button {
+        display: inline;
+        position: relative;
+        font: 32px Helvetica, Sans-Serif;
+        border: 2px solid grey;
+        border-radius: 4px;
+        color: rgba(255, 0, 255, 0.5); 
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    button:after {
+        content: "Attempt";
+        position: absolute; left: 5px; top: 2px;
+        color: rgba(255,255,0,0.5);   
+    }
+
+    input {
+        font: 32px Helvetica, Sans-Serif;
+        padding-left: 4px;
+        box-sizing: border-box;
+        border: 2px solid grey;
+        border-radius: 4px;
+    }
+
+    .title-box {
+        position: absolute;
+        top: calc(50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    .input-box {
+        position: absolute;
+        top: calc(50% + 120px);
+        width: 100%;
+        text-align: center;
+    }
+
+    .box {
+        position: relative;
+        display: inline-block;
+        left: calc(50% - 60px - 140px);
+        top: calc(50% - 60px);
+        height: 120px;
+        width: 120px;
+        margin-top: 10%;
+        border: 5px solid #FFF;
+        animation-name: rotation;
+        animation-duration: 6s;
+        animation-timing-function: ease;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+    }
+
+    .box .filler {
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: 0;
+        background: #FFF;
+        width: 100%;
+        height: 0;
+        animation-name: fillup;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+    }
+    </style>
+
+	<script src="RunnerCube4.js"></script>
+	<title> Runner Cube 4 </title>
+</head>
+<body>
+    <span class="box up">
+        <span class="filler"></span>
+    </span>
+    <span class="box up">
+        <span class="filler"></span>
+    </span>
+    <span class="box up">
+        <span class="filler"></span>
+    </span>
+    <div class='title-box'>
+        <h1>Can you crack the code? </h1>
+    </div>
+    <div class='input-box'>
+        <input type="text" placeholder="Try to find the flag..." id="input">
+        <button type="button" onclick="letTheMagicHappen();">Attempt </button>
+    </div>
+    <script>
+        function letTheMagicHappen(){let e=document.getElementById("input").value,t=a(e,String(b)+String(a)),r=b(e,String(a)+String(b)),o="";for(let e=0;e<t.length;e+=2)o+=String.fromCharCode((t[e]>>8)%90+31),o+=String.fromCharCode(r[e]%90+31),o+=String.fromCharCode((255&t[e+1])%90+31),o+=String.fromCharCode(r[e+1]%90+31);"i3(`a1(Z'J(,cU(Wg3(J[-(J'*(1g?(G"==o?alert("Now you know too much, our secret plan was to: "+e):alert("Incorrect")}function a(e,t){let r=[],o=0;for(let e=0;e<t.length;e++)o=(o+t.charCodeAt(e)*t.charCodeAt(e))%65536;for(let t=0;t<e.length;t++){let n=e.charCodeAt(t)+e.charCodeAt(t)<<8^o;r.push(n)}return r.reverse()}function b(e,t){let r=0;for(let e=0;e<t.length;e++)r=(r+t.charCodeAt(e))%256;let o=[];for(let n=0;n<2*e.length;n++)r+=e.charCodeAt(n%e.length),o.push(t.charCodeAt(r%t.length));return o.reverse()}
+    </script>
+</body>
+
+</html>

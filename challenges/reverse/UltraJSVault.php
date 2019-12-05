@@ -13,7 +13,7 @@
     }
     else
     {
-        $flagResult = checkFlag('blow-up-the-ocean', 'UltraJSVault', 400);
+        $flagResult = checkFlag('l4uNCh_A1l_Nuk35', 'UltraJSVault', 400);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
@@ -36,7 +36,7 @@
             <div class='underline'>
                 <p>&emsp;&emsp;"I'm impressed you were able to crack my super secure password encryptor.
                 However, I learn from my mistakes. Now I store all my secrets on 
-                <a href="<?php echo $_SESSION['redir']?>challenge-site/the-vault-of-america.html">this</a> website. If you can crack it,
+                <a href="<?php echo $_SESSION['redir']?>challenge-site/magic-vault.html">this</a> website. If you can crack it,
                 then you can find the USA's next greatest plan. " - The President of the United States of America.</p>
             </div>
 
@@ -48,7 +48,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 300 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 400 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

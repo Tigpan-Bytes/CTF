@@ -37,7 +37,7 @@
                 <p>&emsp;&emsp;Hey, dude! You are clearing this challenges too quickly, we need you to slow it down. So for this one I'm not 
                 going to give you any hints, you will recieve no Comment from me.</p>
 
-                <!--1 least significant bit, 3px per char, message ends on 1-->
+                <!--1 least significant bit, 3px per char, message ends on 1 continues on 0-->
 
                 <p>Here's a picture of the Mona Lisa, nothing else.</p>
 

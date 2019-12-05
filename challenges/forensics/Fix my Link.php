@@ -13,12 +13,12 @@
     }
     else
     {
-        $flagResult = checkFlag('sh0u1d.h4ve.b3at.1t.l1g1t', 'Runner Cube 4', 100);
+        $flagResult = checkFlag('only_getting_harder_from_here', 'Fix my Link', 50);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
-    Runner Man 4';
+    Fix my Link';
 ?>
 
 <?php include $_SESSION['redir'].'head.php';?>
@@ -29,20 +29,22 @@
     <div class='challenge-holder'>
         <div class='portion-holder'>
             <div class='underline'>
-                <h3 style='text-align:center;'>Runner Cube 4</h3>
-                <p style='text-align:center;'>Forensics • 100 points</p>
+                <h3 style='text-align:center;'>Fix my Link</h3>
+                <p style='text-align:center;'>Forensics • 50 points</p>
             </div>
 
             <div class='underline'>
-                <p>&emsp;&emsp;As you may already know, when you go on any website you can right click to 'inspect element' this allows you to look
-                at all of the HTML of the page and even change it (it doesn't change for everybody just locally for yourself). In addition to that you
-                can also view any JavaScript being run by pressing f12 to bring up the developer console, then either going to
-                sources (Chrome) or debugger (Firefox). In that section you can find the JavaScript code, it is also sometimes a good idea to copy the JS
-                the HTML onto your computer so you can edit it and view it more easily.</p>
+                <p>&emsp;&emsp;You can view any HTML being used by right clicking on the page where you want to view it, then clicking Inspect
+                    or Inspect Element (you can also click View Page Source but this will show you the raw html for the entire webpage instead
+                    of the specfic element you want to view.</p>
                 
-                <p>&emsp;&emsp;Can you beat my game, <a href="<?php echo $_SESSION['redir']?>challenge-site/Runner Cube 4.html">Runner Cube 4</a>? I could do it first try 
-                (I might have to use a cheat code however).</p>
+                <p>&emsp;&emsp;This challenge was originally going to be free, a single link to the flag with no real challenge... but
+                    I can't figure out how to get the button to work, if you can figure it out then you can get the flag. You might want 
+                    to use <a href="https://www.w3schools.com/html/html_links.asp">this</a> to help you learn how to make links.</p>
 
+                <p>
+                    <a click_for_link_to_webpage="<?php echo $_SESSION['redir']?>challenge-site/flag.html">Click for Flag</a>
+                </p>
              </div>
 
             <form method="post">
@@ -53,7 +55,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 100 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 50 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

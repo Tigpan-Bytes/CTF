@@ -36,7 +36,8 @@
             <div class='underline'>
                 <p>&emsp;&emsp;You can view any HTML being used by right clicking on the page where you want to view it, then clicking Inspect
                     or Inspect Element (you can also click View Page Source but this will show you the raw html for the entire webpage instead
-                    of the specfic element you want to view.</p>
+                    of the specfic element you want to view. In addition, when you inspect element you can also change the HTML right there
+                    and it will be changed on your browser.</p>
                 
                 <p>&emsp;&emsp;This challenge was originally going to be free, a single link to the flag with no real challenge... but
                     I can't figure out how to get the button to work, if you can figure it out then you can get the flag. You might want 

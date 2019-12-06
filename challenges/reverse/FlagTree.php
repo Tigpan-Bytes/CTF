@@ -18,7 +18,7 @@
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
-    Secret Deal';
+    FlagTree';
 ?>
 
 <?php include $_SESSION['redir'].'head.php';?>

@@ -260,11 +260,41 @@
         sql format:
 
         db: ctf - utf8_unicode_ci
-        table: users - 4 cols (id[int], username[varchar(32)], pwhash[varchar(128)], team[varchar(16)])
+        table: users - 3 cols (username[varchar(32)], pwhash[varchar(128)], team[varchar(16)])
 
-        0 - Tigpan  - password      - h3x0r
-        1 - Abar    - nineEleven    - h3x0r
-        2 - Tyrone  - arma4         - more1337
-        3 - Anurag  - berlin        - more1337
+        Tigpan  - password      - h3x0r
+        Abar    - nineEleven    - h3x0r
+        Tyrone  - arma4         - more1337
+        Anurag  - berlin        - more1337
+
+        table: teams - 4 cols (teamname[varchar(10)], members[text], score[int(11)], solved[text])
+
+        h3x0r       - Tigpan,Abar,Kurtz     - 3400  - b7 String,Runner Cube 4,Secret Deal
+        more1337    - Tyrone,Anurag,Obama   - 400   - b7 String,
+
+
+        db: needle - utf8_unicode_ci
+        table: users - 3 cols (username[text], password[text], role[text])
+        John 	harper 	member
+        David 	monkey 	member
+        Andrew 	dogs 	member
+        Daniel 	nohack 	admin
+        Zane 	mars 	member
+        Mary 	trees 	member
+        Carol 	password 	member
+
+        table: users - 3 cols (name[text], price[decimal(10,2)], quantity[int])
+        3" Needle 	1.99 	28
+        3' Needle 	29.99 	2
+        A Gun 	799.99 	2
+        Bag o' Needles 	199.99 	6
+        Dull Needle 	0.01 	198
+        Embroidery 	2.49 	146
+        Knitting Needles 	6.99 	54
+        Sharp Needle 	9.99 	3
+        Steel Needle 	3.89 	28
+        Universal 	1.99 	102
+        Used Needles 	0.00 	8
+        Wooden Needle 	3.89 	19
     */
 ?>

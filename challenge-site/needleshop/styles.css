@@ -1,0 +1,88 @@
+body, html {
+    padding: 4px;
+    margin: 4px;
+    background-color: #097;
+}
+
+h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 48px;
+    color: red;
+}
+
+h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 32px;
+    color: magenta;
+}
+
+h3 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 24px;
+    color: lime;
+}
+
+p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+table {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #095;
+}
+
+tr:nth-child(odd) {
+    background-color: #0a7;
+}
+
+.horizontally {
+    height: 150px;	
+    overflow: hidden;
+    position: relative;
+}
+.horizontally .inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(40%);
+    -webkit-transform:translateX(40%);	
+    transform:translateX(40%);
+    /* Apply animation to this element */	
+    -moz-animation: horizontally 5s linear infinite alternate;
+    -webkit-animation: horizontally 5s linear infinite alternate;
+    animation: horizontally 5s linear infinite alternate;
+}
+/* Move it (define the animation) */
+@-moz-keyframes horizontally {
+    0%   { -moz-transform: translateX(40%); }
+    100% { -moz-transform: translateX(-40%); }
+}
+@-webkit-keyframes horizontally {
+    0%   { -webkit-transform: translateX(40%); }
+    100% { -webkit-transform: translateX(-40%); }
+}
+@keyframes horizontally {
+    0%   { 
+        -moz-transform: translateX(40%); /* Browser bug fix */
+        -webkit-transform: translateX(40%); /* Browser bug fix */
+        transform: translateX(40%); 		
+    }
+    100% { 
+        -moz-transform: translateX(-40%); /* Browser bug fix */
+        -webkit-transform: translateX(-40%); /* Browser bug fix */
+        transform: translateX(-40%); 
+    }
+}

@@ -19,25 +19,25 @@
         $un = $_POST['sql_username'];
         $pw = $_POST['sql_password'];
 
-        $sql = "SELECT * FROM users WHERE (username='$un') AND (password='$pw')";
-        if ($result = mysqli_query($conn, $sql))
+        $sql = "SELECT * FROM users WHERE username='$un' AND password='$pw'";
+        mysqli_multi_query($conn, $sql);
+        $result = mysqli_store_result($conn);
+        if (mysqli_error($conn))
         {
-            $row = mysqli_fetch_assoc($result);
-
-            if(mysqli_num_rows($result) >= 1)
+            echo "<h3>An error occured in our mySQL server when logging in, oops?</h3>";
+        }
+        else
+        {        
+            if($row = mysqli_fetch_row($result))
             {
-                $_SESSION['cache_username'] = $row['username'];
-                $_SESSION['cache_password'] = $row['password'];
+                $_SESSION['cache_username'] = $row[0];
+                $_SESSION['cache_password'] = $row[1];
                 header('Location: home.php');
             }
             else
             {
                 echo "<h3>Invalid username and password</h3>";
             }
-        }
-        else
-        {        
-            echo "<h3>An error occured in our mySQL server when logging in, oops?</h3>";
         }
 
         mysqli_close($conn);

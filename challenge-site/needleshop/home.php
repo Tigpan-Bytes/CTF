@@ -34,8 +34,7 @@
     {
         $name = $_POST['sql_name'];
 
-        $sql = "SELECT * FROM products WHERE name Like '%$name%';--feeee";
-        echo $sql;
+        $sql = "SELECT * FROM products WHERE name Like '%$name%'";
         mysqli_multi_query($conn, $sql);
         $search_result = mysqli_store_result($conn);
         if (mysqli_error($conn))

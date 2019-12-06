@@ -283,7 +283,7 @@
         Mary 	trees 	member
         Carol 	password 	member
 
-        table: users - 3 cols (name[text], price[decimal(10,2)], quantity[int])
+        table: products - 3 cols (name[text], price[decimal(10,2)], quantity[int])
         3" Needle 	1.99 	28
         3' Needle 	29.99 	2
         A Gun 	799.99 	2

@@ -13,7 +13,7 @@
     }
     else
     {
-        $flagResult = checkFlag('you_are_hacker_supreme', 'PwnaLisa', 400);
+        $flagResult = checkFlag('you_are_hacker_supreme', 'PwnaLisa', 350);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
@@ -30,7 +30,7 @@
         <div class='portion-holder'>
             <div class='underline'>
                 <h3 style='text-align:center;'>PwnaLisa</h3>
-                <p style='text-align:center;'>Crypto • 400 points</p>
+                <p style='text-align:center;'>Crypto • 350 points</p>
             </div>
 
             <div class='underline'>
@@ -52,7 +52,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 400 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 350 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

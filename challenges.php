@@ -78,7 +78,7 @@
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'Color Math') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/Color Math.php'">
-                    Color Math<br><span class='score'>300</span></td>
+                    Color Math<br><span class='score'>250</span></td>
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td>
                 <td <?php if (strpos($solvedChallenges, 'SaltedCracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/SaltedCracker.php'">
@@ -86,11 +86,11 @@
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/PwnaLisa.php'">
-                    PwnaLisa<br><span class='score'>400</span></td>
+                    PwnaLisa<br><span class='score'>350</span></td>
                 <td <?php if (strpos($solvedChallenges, "The 'Ess Que Elle' Needle Shop") !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/SQLNeedleShop.php'">
-                    The 'Ess Que Elle' Needle Shop<br><span class='score'>450</span></td>  <!-- sql injection to find flag -->
+                    The 'Ess Que Elle' Needle Shop<br><span class='score'>400</span></td>  <!-- sql injection to find flag -->
                 <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/UltraJSVault.php'">
-                    UltraJSVault<br><span class='score'>400</span></td>
+                    UltraJSVault<br><span class='score'>350</span></td>
             </tr>
         </table>
     </div>

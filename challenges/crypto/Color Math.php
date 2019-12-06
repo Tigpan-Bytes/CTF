@@ -13,7 +13,7 @@
     }
     else
     {
-        $flagResult = checkFlag('8948-1777-5992', 'Color Math', 300); //212*64-42*110 (rbbg), 97+240/30*210 (ggbr), 255*255-239*247 (rbgr)
+        $flagResult = checkFlag('8948-1777-5992', 'Color Math', 250); //212*64-42*110 (rbbg), 97+240/30*210 (ggbr), 255*255-239*247 (rbgr)
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
@@ -30,7 +30,7 @@
         <div class='portion-holder'>
             <div class='underline'>
                 <h3 style='text-align:center;'>Color Math</h3>
-                <p style='text-align:center;'>Crypto • 300 points</p>
+                <p style='text-align:center;'>Crypto • 250 points</p>
             </div>
 
             <div class='underline'>
@@ -54,7 +54,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 300 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 250 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

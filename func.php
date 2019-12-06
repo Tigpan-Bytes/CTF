@@ -172,21 +172,21 @@
                         $_SESSION["team"] = $row['team'];
                     }
 
-                    $returnable = ['success'=>TRUE, 'err'=>""];
+                    $returnable = ['success'=>TRUE, 'err'=>"", 'team'=>$row['team']];
                 }
                 else
                 {
-                    $returnable = ['success'=>FALSE, 'err'=>"Invalid Login."];
+                    $returnable = ['success'=>FALSE, 'err'=>"Invalid Login.", 'team'=>FALSE];
                 }
             } 
             else
             {
-                $returnable = ['success'=>FALSE, 'err'=>"That username doesn't exist."];
+                $returnable = ['success'=>FALSE, 'err'=>"That username doesn't exist.", 'team'=>FALSE];
             }
         }
         else
         {        
-            $returnable = ['success'=>FALSE, 'err'=>"Something went wrong, oops?."];
+            $returnable = ['success'=>FALSE, 'err'=>"Something went wrong, oops?.", 'team'=>FALSE];
         }
 
         mysqli_close($conn);

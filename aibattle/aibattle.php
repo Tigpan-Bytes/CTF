@@ -26,7 +26,7 @@
             <h2>Download AI Kit</h2>
         </div>
 
-        <div class='underline' onclick="location.href='GO TO GITHUB PAGE IN THE FUTURE.php'">
+        <div class='underline' onclick="location.href='upload.php'">
             <h2>Submit AI</h2>
         </div>
 

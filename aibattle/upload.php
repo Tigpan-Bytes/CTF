@@ -47,7 +47,6 @@
         } 
         else 
         {
-            echo $fileType;
             $message = 3;
             $uploadOk = 0;
         }
@@ -70,17 +69,22 @@
     </div>
 
     <?php
+        $did = TRUE
         foreach($files as $file)
         { // iterate files
             if(is_file($file))
             {
                 echo "<p style='text-align: center;'>Current AI: ".basename($file).".</p>";
+                $did = FALSE
             }
         }
 
         if ($message == 1)
         {
-            echo "<p style='text-align: center;'>Current AI: ".basename( $_FILES["fileToUpload"]["name"]).".</p>";
+            if ($did)
+            {
+                echo "<p style='text-align: center;'>Current AI: ".basename( $_FILES["fileToUpload"]["name"]).".</p>";
+            }
             echo "<div class='success'>The file ".basename( $_FILES["fileToUpload"]["name"])." has been uploaded.</div>";
         }
         elseif ($message == 2) 

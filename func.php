@@ -63,11 +63,11 @@
                 $_SESSION["password"] = $pw;
                 $_SESSION["team"] = $team;
 
-                $returnable = ['success'=>TRUE, 'err'=>""];
+                $returnable = ['success'=>TRUE, 'err'=>"", 'team'=>$team];
             } 
             else
             {
-                $returnable = ['success'=>FALSE, 'err'=>"Invalid Register. Either username is taken, or teamname is taken exist."];
+                $returnable = ['success'=>FALSE, 'err'=>"Invalid Register. Either username is taken, or teamname is taken exist.", 'team'=>FALSE];
             }
         }
         elseif (!$createTeam)
@@ -95,16 +95,16 @@
                 mysqli_stmt_bind_param($stmt, "ss", $un, $team);
                 mysqli_stmt_execute($stmt);
 
-                $returnable = ['success'=>TRUE, 'err'=>""];
+                $returnable = ['success'=>TRUE, 'err'=>"", 'team'=>$team];
             } 
             else
             {
-                $returnable = ['success'=>FALSE, 'err'=>"Invalid Register. Either username is taken, or team doesn't exist."];
+                $returnable = ['success'=>FALSE, 'err'=>"Invalid Register. Either username is taken, or team doesn't exist.", 'team'=>FALSE];
             }
         }
         else
         {        
-            $returnable = ['success'=>FALSE, 'err'=>"Something went wrong, oops?."];
+            $returnable = ['success'=>FALSE, 'err'=>"Something went wrong, oops?.", 'team'=>FALSE];
         }
 
         mysqli_close($conn);

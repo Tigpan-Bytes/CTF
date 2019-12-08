@@ -45,6 +45,10 @@
     }
     elseif(array_key_exists('create-submit', $_POST))
     {
+        if (!file_exists('../../../__bots__')) {
+            mkdir('../../../__bots__', 0777, true);
+        }
+
         if (getSessionVar('create-password') == getSessionVar('create-passwordConfirm'))
         {
             if (strlen(getSessionVar('create-username')) <= 16 && strlen(getSessionVar('create-username')) != 0)
@@ -55,7 +59,7 @@
                     {
                         if (goodAscii(getSessionVar('create-team')) === true)
                         {
-                            if (strlen(getSessionVar('join-password')) >= 4)
+                            if (strlen(getSessionVar('create-password')) >= 4)
                             {
                                 $auth = register(getSessionVar('create-username'), getSessionVar('create-password'), getSessionVar('create-team'), true);
                                 if (!$auth['success'])
@@ -64,6 +68,9 @@
                                 }
                                 else
                                 {
+                                    if (!file_exists('../../../__bots__/'.$auth['team'])) {
+                                        mkdir('../../../__bots__/'.$auth['team'], 0777, true);
+                                    }
                                     header('Location: main.php');
                                 }
                             }

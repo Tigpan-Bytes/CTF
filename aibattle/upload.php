@@ -69,13 +69,13 @@
     </div>
 
     <?php
-        $did = TRUE
+        $did = TRUE;
         foreach($files as $file)
         { // iterate files
             if(is_file($file))
             {
                 echo "<p style='text-align: center;'>Current AI: ".basename($file).".</p>";
-                $did = FALSE
+                $did = FALSE;
             }
         }
 

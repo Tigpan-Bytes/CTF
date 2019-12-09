@@ -141,8 +141,8 @@
             <p> &emsp;&emsp; An AI can lose the battle when all of their hives are destroyed. An AI can also be terminated. Being terminated means they did one of three things:</p>
             <p> &emsp;&emsp; 1. Runtime error. When a bot encounters a runtime error it is immediatly terminated. This means the AI is killed and given 0 points, (their position in the order of death is uneffected, 
                 they act as if they just died). In the application this is shown as TERMINATED [Naughty].</p>
-            <p> &emsp;&emsp; 2. Timeout error. If your bot runs for more than <span style='color: white;'>0.5 seconds</span> it will not do any actions that turn and it will.
-                recieve 1 'time out' if a bot gets 5 'time outs' then they are terminated with the message TERMINATED [Timeout].</p>
+            <p> &emsp;&emsp; 2. Timeout error. If your bot runs for more than <span style='color: white;'>0.5 seconds</span> it will not do any actions that turn and it will
+                recieve 1 'time out', if a bot gets 5 'time outs' then they are terminated with the message TERMINATED [Timeout].</p>
             <p> &emsp;&emsp; 3. Security threat. This is automatically triggered if your bot attempts to import things other than the default imports, or if you try to open a file.
                 Also if the tournament organizer deems that running your Bot is a security risk, then it will not be run 
                 and your team may be banned from participating in further Bee Swarm Battle rounds.</p>

@@ -125,7 +125,7 @@
 
             <p> &emsp;&emsp; The game ends when one of two conditions are met. </p>
             <p> &emsp;&emsp; <span style='color: white;'>1. There is only one bot remaining.</span></p>
-            <p> &emsp;&emsp; In this situation 1st, 2nd, and 3rd are decided in the order of death. Last AI alive is 1st
+            <p> &emsp;&emsp; In this situation 1st, 2nd, and 3rd are decided in the order of death. Last AI alive is 1st,
                 last to die is 2nd, second last to die is 3rd.
             </p>
             <p> &emsp;&emsp; <span style='color: white;'>2. The turn counter reaches 750.</span></p>

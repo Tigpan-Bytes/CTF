@@ -41,6 +41,8 @@
             </p>
             <p>&emsp;&emsp; It is also <span style='color: white;'>highly recommended</span> that you skim the overview before reading this.</p>
             </p>
+            <p>&emsp;&emsp;<span style='color: white;'>Make absolutly certain that when you create and upload bots that you change the TEAM variable (3rd line), if you don't
+                your team will not get points for winning.</span></p>
         </div>
 
         <div class='underline'>

@@ -88,7 +88,7 @@
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/PwnaLisa.php'">
                     PwnaLisa<br><span class='score'>350</span></td>
                 <td <?php if (strpos($solvedChallenges, "The 'Ess Que Elle' Needle Shop") !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/SQLNeedleShop.php'">
-                    The 'Ess Que Elle' Needle Shop<br><span class='score'>400</span></td>  <!-- sql injection to find flag -->
+                    The 'Ess Que Elle' Needle Shop<br><span class='score'>400</span></td>
                 <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/UltraJSVault.php'">
                     UltraJSVault<br><span class='score'>350</span></td>
             </tr>

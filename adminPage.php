@@ -31,6 +31,10 @@
         $resulted = '';
         $resultedtwo = '';
         $err = '';
+        if (array_key_exists('fullquery', $_POST))
+        {
+            $sql = $_POST['query'];
+        }
         if (array_key_exists('cnusubmit', $_POST))
         {
             if (strlen($_POST['newUsername']) > 16 || strlen($_POST['newUsername']) == 0)
@@ -121,7 +125,7 @@
 
         if ($sql != '')
         {
-            mysqli_query($conn, $sql);
+            mysqli_multi_query($conn, $sql);
             if (mysqli_affected_rows($conn) > 0) 
             {
                 $resulted = mysqli_affected_rows($conn).' row affected.';
@@ -133,7 +137,7 @@
         }
         if ($sqltwo != '')
         {
-            mysqli_query($conn, $sqltwo);
+            mysqli_multi_query($conn, $sqltwo);
             if (mysqli_affected_rows($conn) > 0) 
             {
                 $resultedtwo = mysqli_affected_rows($conn).' row affected.';
@@ -211,6 +215,12 @@
     </div>
     
     <?php include 'scoreboard.php';?>
+
+    <h3 style='text-align:left;'>Full Query (BSB?)</h3>
+    <form method="post">
+		Query: <input type="text" name="query"><br>
+		<input type="submit" name='fullquery'>
+	</form>
 
     <h3 style='text-align:left;'>Create new User</h3>
     <form method="post">

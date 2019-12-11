@@ -42,8 +42,8 @@ class Timer:
                         file_loc = join(dir_loc, file)
                         if isfile(file_loc):
                             copy(file_loc, bot_path)
-                            rename(join(bot_path, file), join(bot_path, file[:-3] + '                ' + str(
-                                random.randint(0, 999999)) + '.py'))
+                            rename(join(bot_path, file), join(bot_path, file[:-3] + '                    ' + str(
+                                random.randint(0, 99999999)) + '.py'))
             text = "Next Round!"
 
             self.label.configure(text=text, font="Arial 172")

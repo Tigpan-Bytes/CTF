@@ -47,7 +47,8 @@
                 SELECT username FROM users WHERE username=?
             )LIMIT 1");
 
-            mysqli_stmt_bind_param($stmt, "ssss", $team, $un, $team, $un);
+            $team_un = $un.',';
+            mysqli_stmt_bind_param($stmt, "ssss", $team, $team_un, $team, $un);
             mysqli_stmt_execute($stmt);
 
             if (mysqli_affected_rows($conn) != 0) 
@@ -267,10 +268,10 @@
         Tyrone  - arma4         - more1337
         Anurag  - berlin        - more1337
 
-        table: teams - 4 cols (teamname[varchar(10)], members[text], score[int(11)], solved[text])
+        table: teams - 4 cols (teamname[varchar(10)], members[text], score[int(11)], solved[text], bsb1[TINY INT], bsb2[TINY INT], bsb3[TINY INT])
 
-        h3x0r       - Tigpan,Abar,Kurtz     - 3400  - b7 String,Runner Cube 4,Secret Deal
-        more1337    - Tyrone,Anurag,Obama   - 400   - b7 String,
+        h3x0r       - Tigpan,Abar,Kurtz     - 3400  - b7 String,Runner Cube 4,Secret Deal, - 0 - 0 - 0
+        more1337    - Tyrone,Anurag,Obama   - 400   - b7 String, - 0 - 0 - 0
 
 
         db: needle - utf8_unicode_ci

@@ -13,7 +13,7 @@
     }
     else
     {
-        $flagResult = checkFlag('nukes', 'SaltedCracker', 300);
+        $flagResult = checkFlag('usa', 'SaltedCracker', 300);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
@@ -37,8 +37,8 @@
                 <p>&emsp;&emsp;"Hey buddy, I need your help, I got the presidents password but its encrypted. I got his encrypted password
                 and the c++ program that was used to encrypt the password.
                 <a href="<?php echo $_SESSION['redir']?>challenge-site/SECRET-ENCRYPTOR.txt">Here</a> is the program, and the hash 
-                is '56C9FBD1FB62951228A2CBBCF64486B7D85A605A'. I know that his password only uses lowercase letters and nothing else, but I 
-                don't know the length, I assume its not too long. If I were you I would consider using some brute force to break it." - Unknown.</p>
+                is 'A38FC0F208823A17D3347ECBF1F92490A73D4F7D'. I know that his password only uses lowercase letters and nothing else, and his
+                password is only 3 characters long. If I were you I would consider using some brute force to break it." - Unknown.</p>
             </div>
 
             <form method="post">

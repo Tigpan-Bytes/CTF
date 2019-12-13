@@ -40,8 +40,8 @@
 
 			<p>&emsp;&emsp;In most CTFs for your skill level, there is typically a Misc or Prog catagory for coding
 			programs to solve specific problems. The twist for this CTF is that instead of a Prog catagory, an AI Battle is being
-			held. Each team submits their best AIs to play a simple game, every 10mins each team's most recent AI is tested against
-			all the other team's Bots. The team who wins gets 50 points, second gets 40 points, and third gets 30 points. Each team can
+			held. Each team submits their best AIs to play a simple game, every 15mins each team's most recent AI is tested against
+			all the other team's Bots. The team who wins gets 100 points, second gets 75 points, and third gets 50 points. Each team can
 			submit AIs as often as they please, but only the most recent one is used. Everyone will have access to extensive documentation,
 			some sample Bots, and an API for for controling the AI, and a local version of the game to test your bot before the match. Have fun!
 			</p>
@@ -50,5 +50,3 @@
 
 	<?php include 'scoreboard.php';?>
 </body>
-
-<!--https://github.com/junthehacker/skillscanada-national-2016-->

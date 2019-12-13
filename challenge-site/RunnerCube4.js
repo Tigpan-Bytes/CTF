@@ -50,8 +50,9 @@ function draw()
             stroke(255);
             strokeWeight(1);
             rect(windowWidth * 0.3, windowHeight / 2 - 80, windowWidth * 0.4, 80);
-            //flag, ha theres no flag here but you tried to control-f didn't you. so predictable, you should try and look for where it spawns enemies
-            //because it seems to be it checks for a cheat code when it spawns the waves
+            // flag, ha theres no flag here but you tried to control-f didn't you. so predictable, 
+            // you should try and look for where the code spawns enemies
+            // because it seems it checks for a cheat code when it spawns the waves
             fill(255);
             noStroke();
             text('Start Game', windowWidth / 2, windowHeight / 2 - 30);
@@ -127,7 +128,7 @@ function drawGame()
 
     textSize(16);
 
-    text('Time: ' + floor(levelTime * 10) / 10 + " / 7.5sec", windowWidth / 2, 96);
+    text('Time: ' + floor(levelTime * 10) / 10 + " / 5.0sec", windowWidth / 2, 96);
 
     text(message, windowWidth / 2, windowHeight - 32);
 
@@ -139,7 +140,7 @@ function drawGame()
     spawnCubes();
     moveCubes();
 
-    if (levelTime > 7.5)
+    if (levelTime > 5.0)
     {
         level++;
         levelTime = 0;
@@ -196,7 +197,7 @@ function spawnCubes()
             }
             else
             {
-                shouldSpawn = true; //lol good luck people
+                shouldSpawn = true; //lol good luck people, have fun beating this without the cheat code
                 message = 'Goodbye, ' + userName;
             }
             break;

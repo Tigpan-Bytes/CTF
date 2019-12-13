@@ -54,19 +54,19 @@
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'Bin->ASCII') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/BinToASCII.php'">
-                    Bin->ASCII<br><span class='score'>50</span></td> <!-- convert binary to ascii -->
+                    Bin->ASCII<br><span class='score'>50</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'Fix my Link') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/Fix my Link.php'">
-                    Fix my Link<br><span class='score'>50</span></td> <!-- look at comment of page to fix button -->
+                    Fix my Link<br><span class='score'>50</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'FlagTree') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/FlagTree.php'">
-                    FlagTree<br><span class='score'>50</span></td> <!-- look through python decision tree -->
+                    FlagTree<br><span class='score'>50</span></td> <!-- checked 1 -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'b7 String') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/b7 String.php'">
                     b7 String<br><span class='score'>100</span></td>
                 <td <?php if (strpos($solvedChallenges, 'Runner Cube 4') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/Runner Cube 4.php'">
-                    Runner Cube 4<br><span class='score'>100</span></td>
+                    Runner Cube 4<br><span class='score'>100</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'Secret Deal') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/Secret Deal.php'">
-                    Secret Deal<br><span class='score'>150</span></td>
+                    Secret Deal<br><span class='score'>150</span></td> <!-- checked 1 -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/RanchCipher.php'">
@@ -82,13 +82,13 @@
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td>
                 <td <?php if (strpos($solvedChallenges, 'SaltedCracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/SaltedCracker.php'">
-                    SaltedCracker<br><span class='score'>300</span></td>
+                    SaltedCracker<br><span class='score'>300</span></td> <!-- checked 1 -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/PwnaLisa.php'">
                     PwnaLisa<br><span class='score'>350</span></td>
                 <td <?php if (strpos($solvedChallenges, "The 'Ess Que Elle' Needle Shop") !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/SQLNeedleShop.php'">
-                    The 'Ess Que Elle' Needle Shop<br><span class='score'>400</span></td>
+                    The 'Ess Que Elle' Needle Shop<br><span class='score'>400</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/UltraJSVault.php'">
                     UltraJSVault<br><span class='score'>350</span></td>
             </tr>

@@ -35,9 +35,10 @@
 
             <div class='underline'>
                 <p>&emsp;&emsp;"Hey buddy, I need your help, I got the presidents password but its encrypted. I got his encrypted password
-                and the c++ program that was used to encrypt the password.
+                and the c++ program that was used to encrypt the password. I know if they want to test if the password is correct, they
+                rerun the algorithm will all the possible seeds and if any outputs match the password hash, then the password is correct.
                 <a href="<?php echo $_SESSION['redir']?>challenge-site/SECRET-ENCRYPTOR.txt">Here</a> is the program, and the hash 
-                is 'A38FC0F208823A17D3347ECBF1F92490A73D4F7D'. I know that his password only uses lowercase letters and nothing else, and his
+                is 'BE518B1DAF8A3DBFC1FB26294335D752F5175943'. I know that his password only uses lowercase letters and nothing else, and his
                 password is only 3 characters long. If I were you I would consider using some brute force to break it." - Unknown.</p>
             </div>
 

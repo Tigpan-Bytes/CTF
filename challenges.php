@@ -62,7 +62,7 @@
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'b7 String') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/b7 String.php'">
-                    b7 String<br><span class='score'>100</span></td>
+                    b7 String<br><span class='score'>100</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'Runner Cube 4') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/Runner Cube 4.php'">
                     Runner Cube 4<br><span class='score'>100</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'Secret Deal') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/Secret Deal.php'">
@@ -70,7 +70,7 @@
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/RanchCipher.php'">
-                    RanchCipher<br><span class='score'>150</span></td>
+                    RanchCipher<br><span class='score'>150</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'Gallery') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/Gallery.php'">
                     Gallery<br><span class='score'>100</span></td>
                 <td <?php if (strpos($solvedChallenges, 'Literal Reversal') !== false) { echo "class='complete'"; }?>  onclick="location.href='challenges/reverse/Literal Reversal.php'">
@@ -82,7 +82,7 @@
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td>
                 <td <?php if (strpos($solvedChallenges, 'SaltedCracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/SaltedCracker.php'">
-                    SaltedCracker<br><span class='score'>300</span></td> <!-- checked 1 -->
+                    SaltedCracker<br><span class='score'>300</span></td> <!-- checked 2 -->
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/PwnaLisa.php'">

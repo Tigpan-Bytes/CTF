@@ -298,4 +298,11 @@
         Used Needles 	0.00 	8
         Wooden Needle 	3.89 	19
     */
+
+    /* check list for CTF setup:
+        1: make users db
+        2: make teams db
+        3: make users db [needle]
+        4: make products db [needle]
+        5: upload bsb ghub
 ?>

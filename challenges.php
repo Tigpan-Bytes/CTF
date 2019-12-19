@@ -77,6 +77,14 @@
                     Literal Reversal<br><span class='score'>250</span></td> <!-- checked 1 -->
             </tr>
             <tr>
+                <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/RanchCipher.php'">
+                    RanchCipher<br><span class='score'>150</span></td> <!-- checked 1 -->
+                <td <?php if (strpos($solvedChallenges, 'Error Man') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/Error Man.php'">
+                    Error Man<br><span class='score'>150</span></td>
+                <td <?php if (strpos($solvedChallenges, 'Literal Reversal') !== false) { echo "class='complete'"; }?>  onclick="location.href='challenges/reverse/Literal Reversal.php'">
+                    Literal Reversal<br><span class='score'>250</span></td> <!-- checked 1 -->
+            </tr>
+            <tr>
                 <td <?php if (strpos($solvedChallenges, 'Color Math') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/Color Math.php'">
                     Color Math<br><span class='score'>250</span></td>
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">

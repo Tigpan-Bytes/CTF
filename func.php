@@ -1,4 +1,9 @@
 <?php
+    function start()
+    {
+        return true;
+    }
+
     function getSessionVar($key)
     {
         if (isset($_POST[$key]))
@@ -300,10 +305,12 @@
     */
 
     /* check list for CTF setup:
+        0: make __bots__ folder
         1: make users db
         2: make teams db
         3: make users db [needle]
         4: make products db [needle]
         5: upload bsb ghub
+        6: change start function
     */
 ?>

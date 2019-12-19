@@ -9,7 +9,7 @@
 
     if (!$auth['success'])
     {
-        header('Location: index.php');
+        header('Location: '.$_SESSION['redir'].'index.php');
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> >
@@ -59,7 +59,7 @@
 
             <p> For example: </p>
             <code>
-            <span style='color: #666;'># This code creates 2 different positition variable <br>
+            <span style='color: #666;'># This code creates 2 different position variable <br>
             # Then creates a third one with the sum of the others positions <br>
             # Then prints the contents of the third Position</span> <br>
              <br>
@@ -131,7 +131,7 @@
         <div class='underline'>
 
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.get_tile</span>(<span style='color: white;'>x</span> [Int], 
-                <span style='color: white;'>y</span> [Int])</span></p>
+                <span style='color: white;'>y</span> [Int]) => <span style='color: white;'>Tile</span></span></p>
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_tile(x, y)</span></p>
 
             <p> &emsp;&emsp;This function returns the tile object at the x, y coordinates specified. You could directly access world.tiles[x][y], but this is easier and more fool proof.</p>
@@ -155,7 +155,7 @@
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.get_x_in_range</span>(<span style='color: white;'>start</span> [Position], 
                 <span style='color: white;'>target_func</span> [Function], 
                 <span style='color: white;'>max_distance</span> [Int],
-                <span style='color: white;'>sort_func</span> [Function (Optional: Default = None)])</span></p>
+                <span style='color: white;'>sort_func</span> [Function (Optional: Default = None)]) => <span style='color: white;'>Position List</span></span></p>
                 <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.get_x_in_range(start, target_func, max_distance, sort_func=None)</span></p>
 
             <p> &emsp;&emsp;This function is an easy way to get a list of all the things that meet the target criteria in a certain range. 
@@ -186,7 +186,7 @@
         <div class='underline'>
 
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.breadth_path</span>(<span style='color: white;'>start</span> [Position or Position Array], 
-                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)])</span></p>
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)]) => <span style='color: white;'>Dictionary[Position, (N, S, E, or W)]</span></span></p>
                 <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_path(start, max_distance=Infinity)</span></p>
 
             <p> &emsp;&emsp;breadth_path creates a map of all the cardinal directions (N, S, E, W) needed to reach the start(s) in the fastest time. Example: breadth_path was used to create a list of directions to the target (T), and it avoids walls (X).</p>
@@ -223,7 +223,7 @@
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.breadth_search</span>(<span style='color: white;'>start</span> [Position], 
                 <span style='color: white;'>target_func</span> [Function], 
                 <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)],
-                <span style='color: white;'>get_all_options</span> [Bool (Optional: Default = False)])</span></p>
+                <span style='color: white;'>get_all_options</span> [Bool (Optional: Default = False)]) => <span style='color: white;'>MovePosition</span></span></p>
                 <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.breadth_search(start, target_func, max_distance=Infinity, get_all_options=False)</span></p>
 
             <p> &emsp;&emsp;breadth_search will start at the start position and find the closest tile that meets the target_func criteria. It also moves around walls. 
@@ -262,7 +262,7 @@
 
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.depth_search</span>(<span style='color: white;'>start</span> [Position], 
                 <span style='color: white;'>target</span> [Position], 
-                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)])</span></p>
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)]) => <span style='color: white;'>MovePosition</span></span></p>
                 <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.depth_search(start, target, max_distance=5318008)</span></p>
 
             <p> &emsp;&emsp;depth_search is much MUCH faster than breadth_search, however it requires that you know the exact position of the
@@ -292,7 +292,7 @@
                 <span style='color: white;'>wall_func</span> [Function], 
                 <span style='color: white;'>target_func</span> [Function], 
                 <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)],
-                <span style='color: white;'>get_all_options</span> [Bool (Optional: Default = False)])</span></p>
+                <span style='color: white;'>get_all_options</span> [Bool (Optional: Default = False)]) => <span style='color: white;'>MovePosition</span></span></p>
                 <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.directed_breadth_search(start, wall_func, target_func, max_distance=Infinity, get_all_options=False)</span></p>
 
             <p> &emsp;&emsp;directed_breadth_search functions incredibly similarly to breadth_search, the only difference is instead of using
@@ -300,7 +300,8 @@
                 want to avoid bumping into friendly units.</p>
 
             <code>
-            <span style='color: #666;'># move_bee_home_avoid sets the action of the given bee to move toward the nearest friendly hive while avoiding all food</span><br>
+            <span style='color: #666;'># move_bee_home_avoid sets the action of the given bee to move toward the nearest friendly hive while avoiding all food<br>
+            # however the bee may end up attempting to move through walls</span><br>
             <br>
             class AI: <br>
             <br>
@@ -315,7 +316,7 @@
             &emsp;&emsp;&emsp;&emsp;return not tile.walkable and not.tile.food <br>
             &emsp;&emsp;&emsp;&emsp;<span style='color: #666;'># Should return true if you should search through it</span> <br>
             <br>
-            &emsp;&emsp;def move_bee_home(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
+            &emsp;&emsp;def move_bee_home_avoid(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
             <br>
             &emsp;&emsp;&emsp;&emsp;path = self.world.directed_breadth_search(bee.position, self.is_tile_food, self.is_tile_home)<br>
             <br>
@@ -329,13 +330,14 @@
             <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 24px;'><span style='color: white;'>world.directed_depth_search</span>(<span style='color: white;'>start</span> [Position], 
                 <span style='color: white;'>wall_func</span> [Function], 
                 <span style='color: white;'>target</span> [Position], 
-                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)])</span></p>
+                <span style='color: white;'>max_distance</span> [Int (Optional: Default = Infinity)]) => <span style='color: white;'>MovePosition</span></span></p>
                 <p> &emsp;&emsp;&emsp;&emsp;<span style='font-size: 20px; color: white;'>world.directed_depth_search(start, wall_func, target, max_distance=5318008)</span></p>
 
             <p> &emsp;&emsp;directed_depth_search also functions in the same way as directed_breadth_search.</p>
             
             <code>
-            <span style='color: #666;'># move_bee_ten_avoid sets the action of the given bee to move toward the position (10,10) while avoiding food</span><br>
+            <span style='color: #666;'># move_bee_ten_avoid sets the action of the given bee to move toward the position (10,10) while avoiding food<br>
+            # however the bee may end up attempting to move through walls</span><br>
             <br>
             class AI: <br>
             <br>
@@ -344,7 +346,7 @@
             &emsp;&emsp;def is_tile_food(self, position, distance): <br>
             &emsp;&emsp;&emsp;&emsp;return self.world.get_tile(position.x, position.y).food <br>
             <br>
-            &emsp;&emsp;def move_bee_ten(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
+            &emsp;&emsp;def move_bee_ten_avoid(self, bee): <span style='color: #666;'># You need include self as a parameter for all functions in your AI</span><br>
             <br>
             &emsp;&emsp;&emsp;&emsp;path = self.world.directed_depth_search(bee.position, self.is_tile_food, Position(10, 10))<br>
             <br>

@@ -9,7 +9,7 @@
 
     if (!$auth['success'])
     {
-        header('Location: index.php');
+        header('Location: '.$_SESSION['redir'].'index.php');
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> >

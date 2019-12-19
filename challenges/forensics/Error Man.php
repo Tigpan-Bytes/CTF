@@ -13,12 +13,12 @@
     }
     else
     {
-        $flagResult = checkFlag('d1vi5i0N-bY_z3r0', 'Error Man', 150);
+        $flagResult = checkFlag('d1vi5i0N-bY_z3r0', 'Error Man', 200);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
     <button onclick="location.href=\''.$_SESSION['redir'].'challenges.php\'" class="btn">Challenges</button> >
-    Gallery';
+    Error Man';
 ?>
 
 <?php include $_SESSION['redir'].'head.php';?>
@@ -30,7 +30,7 @@
         <div class='portion-holder'>
             <div class='underline'>
                 <h3 style='text-align:center;'>Error Man</h3>
-                <p style='text-align:center;'>Forensics • 150 points</p>
+                <p style='text-align:center;'>Forensics • 200 points</p>
             </div>
 
             <div class='underline'>
@@ -47,7 +47,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 150 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 200 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

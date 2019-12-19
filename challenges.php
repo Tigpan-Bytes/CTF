@@ -70,11 +70,11 @@
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/RanchCipher.php'">
-                    RanchCipher<br><span class='score'>150</span></td> <!-- checked 1 -->
+                    MAKE ME<br><span class='score'>150</span></td>
                 <td <?php if (strpos($solvedChallenges, 'Gallery') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/Gallery.php'">
                     Gallery<br><span class='score'>100</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'Literal Reversal') !== false) { echo "class='complete'"; }?>  onclick="location.href='challenges/reverse/Literal Reversal.php'">
-                    Literal Reversal<br><span class='score'>250</span></td> <!-- checked 1 -->
+                    MAKE ME<br><span class='score'>250</span></td>
             </tr>
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'RanchCipher') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/RanchCipher.php'">

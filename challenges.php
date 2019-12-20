@@ -94,12 +94,12 @@
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td>
                 <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/UltraJSVault.php'">
-                    UltraJSVault<br><span class='score'>350</span></td>
+                    UltraJSVault<br><span class='score'>400</span></td>
             </tr>
             <tr>
                 <td></td>
                 <td <?php if (strpos($solvedChallenges, "The 'Ess Que Elle' Needle Shop") !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/SQLNeedleShop.php'">
-                    The 'Ess Que Elle' Needle Shop<br><span class='score'>400</span></td> <!-- checked 1 -->
+                    The 'Ess Que Elle' Needle Shop<br><span class='score'>350</span></td> <!-- checked 1 -->
                 <td></td>
             </tr>
         </table>

@@ -13,7 +13,7 @@
     }
     else
     {
-        $flagResult = checkFlag('nohack', "The 'Ess Que Elle' Needle Shop", 400);
+        $flagResult = checkFlag('nohack', "The 'Ess Que Elle' Needle Shop", 350);
     }
 
     $_SESSION['titlePath'] = '<button onclick="location.href=\''.$_SESSION['redir'].'main.php\'" class="btn">Main</button> > 
@@ -30,16 +30,16 @@
         <div class='portion-holder'>
             <div class='underline'>
                 <h3 style='text-align:center;'>The 'Ess Que Elle' Needle Shop</h3>
-                <p style='text-align:center;'>Forensics • 400 points</p>
+                <p style='text-align:center;'>Forensics • 350 points</p>
             </div>
 
             <div class='underline'>
                 <p>&emsp;&emsp;"Hey buddy, a guy that owes me money owns this 'needle shop' I want you to hack into it and give me his password. 
-                    If you can give me the password then I can reward you with 400 points. I also know some things that may help you:<br><br>
+                    If you can give me the password then I can reward you with 350 points. I also know some things that may help you:<br><br>
                     &emsp;1. The database he uses is called 'My Ess Que Elle', however I don't know what that means.<br>
                     &emsp;2. His account's username is 'Daniel'.<br>
                     &emsp;3. The table with all the users is called 'Users'.<br>
-                    &emsp;4. There are at least 3 ways of solving this (another hacker friend told me this).<br><br>
+                    &emsp;4. There are a couple ways of solving this (another hacker friend told me this).<br><br>
                     &emsp;&emsp;Best of luck to you!" - A Friend
                     </p>
                 
@@ -54,7 +54,7 @@
             <?php
                 if ($flagResult == 'success') 
                 { 
-                    echo "<div class='success'>Flag successful! You earned 400 points for your team!</div>";
+                    echo "<div class='success'>Flag successful! You earned 350 points for your team!</div>";
                 }
                 elseif ($flagResult == 'error')
                 {

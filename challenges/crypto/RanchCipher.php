@@ -34,8 +34,8 @@
             </div>
 
             <div class='underline'>
-                <p>&emsp;&emsp;Hey man my friend gave me this code, he said its a 'spin on a caesar cipher', something about different shifts per character 
-                or something... whatever that means. Anyway do you mind helping me crack it? </p>
+                <p>&emsp;&emsp;Hey man, my friend gave me this secret code, he said its a 'spin on a caesar cipher', something about different shifts per character 
+                or something... whatever that means. Anyway, do you mind helping me crack it? </p>
 
                 <p>He also told me that 'a' is 0 and '-' is 26; I don't know what it means though?</p>
                 

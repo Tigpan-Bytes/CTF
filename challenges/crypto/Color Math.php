@@ -36,7 +36,7 @@
             <div class='underline'>
                 <p>&emsp;&emsp;I think you may have gotten off easy. Only writing simple python programs to automate decoding a flag,
                 childs play. Lets have a bit more of a fun one. The flag for this one is in the format of three, four digit numbers
-                seperated by hyphens. Example: 0000-0000-0000.</p>
+                seperated by hyphens. Example: 0000-1234-5678.</p>
 
                 <p>This puzzle has a fair number of pieces. You may want to dig deep into the core values of this puzzle.</p>
 

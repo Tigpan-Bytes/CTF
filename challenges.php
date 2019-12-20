@@ -84,7 +84,7 @@
                 <td <?php if (strpos($solvedChallenges, 'Color Math') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/Color Math.php'">
                     Color Math<br><span class='score'>250</span></td>
                 <td <?php if (strpos($solvedChallenges, 'Error Man') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/Error Man.php'">
-                    Error Man<br><span class='score'>200</span></td>
+                    Error Man<br><span class='score'>200</span></td> <!-- checked 1 -->
                 <td <?php if (strpos($solvedChallenges, 'SaltedCracker') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/SaltedCracker.php'">
                     SaltedCracker<br><span class='score'>300</span></td> <!-- checked 2 -->
             </tr>

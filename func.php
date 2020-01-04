@@ -217,7 +217,7 @@
     {
         if(array_key_exists('submit', $_POST))
         {
-            if ($_POST['flag'] == $flag)
+            if (trim($_POST['flag']) == $flag)
             {
                 $servername = "localhost";
                 $username = "admin";

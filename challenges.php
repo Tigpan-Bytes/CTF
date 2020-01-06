@@ -91,16 +91,10 @@
             <tr>
                 <td <?php if (strpos($solvedChallenges, 'PwnaLisa') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/crypto/PwnaLisa.php'">
                     PwnaLisa<br><span class='score'>350</span></td>
-                <td <?php if (strpos($solvedChallenges, 'JSGone') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/JSGone.php'">
-                    JSGone<br><span class='score'>200</span></td>
-                <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/UltraJSVault.php'">
-                    UltraJSVault<br><span class='score'>400</span></td>
-            </tr>
-            <tr>
-                <td></td>
                 <td <?php if (strpos($solvedChallenges, 'My Little Pwnies') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/forensics/My Little Pwnies.php'">
                     My Little Pwnies<br><span class='score'>200</span></td>
-                <td></td>
+                <td <?php if (strpos($solvedChallenges, 'UltraJSVault') !== false) { echo "class='complete'"; }?> onclick="location.href='challenges/reverse/UltraJSVault.php'">
+                    UltraJSVault<br><span class='score'>400</span></td>
             </tr>
             <tr>
                 <td></td>

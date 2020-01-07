@@ -26,10 +26,9 @@
             </div>
 
             <p>&emsp;&emsp;The Jeopardy Capture the Flag event is a CTF that is seperated into catagories. Each catagory covering
-            a different type and area of hacking. Each catagory is also seperated into different challenges (4 challenges per catagory 
-            for this CTF), each one harder than the last but also awarding more points. You arn't restricted to only a specific 
-            catagory or even solving the challenges in order, you may do any challenge at any time. There are 3 different catagories 
-            for this CTF.</p>
+            a different type and area of hacking. Each catagory is also seperated into different challenges, each one harder than the 
+            last but also awarding more points. You are not restricted to only a specific catagory or even solving the challenges in 
+            order, you may do any challenge at any time. There are 3 different catagories for this CTF.</p>
             
             <p>&emsp;&emsp;
             <span style='color: white;'>Crypto</span> is cracking codes and solving ciphers. 

@@ -32,8 +32,8 @@
             process.</p>
             <p>&emsp;&emsp; Every Team will write AI's that control Bees to collect food, grow their colony and crush others. Teams may submit
             as many AI's as they wish, but only the latest submission will get used in the competition. Every <span style='color: white;'>10mins</span> each team's most recent AI is tested against
-            all the other team's AI's. The team who gets <span style='color: white;'>first gets 200 points</span>, <span style='color: white;'>second gets 125 points</span>, 
-            and <span style='color: white;'>third gets 50 points</span></p>
+            all the other team's AI's. The team who gets <span style='color: white;'>first gets 250 points</span>, <span style='color: white;'>second gets 175 points</span>, 
+            and <span style='color: white;'>third gets 100 points</span></p>
         </div>
 
         <div class='underline'>

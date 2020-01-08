@@ -51,9 +51,7 @@
             <p>&emsp;&emsp;<span style='color: white;'>Score:</span> <?php echo $row['score']; ?></p>
             <p>&emsp;&emsp;<span style='color: white;'>Members:</span> <?php echo substr($row['members'], 0, strlen($row['members']) - 1); ?></p>
             <p>&emsp;&emsp;<span style='color: white;'>Solved Challenges:</span> <?php echo substr($row['solved'], 0, strlen($row['solved']) - 1); ?></p>
-            <p>&emsp;&emsp;<span style='color: white;'>Bee Swarm Battle 1st Places:</span> <?php echo $row['bsb1']; ?></p>
-            <p>&emsp;&emsp;<span style='color: white;'>Bee Swarm Battle 2nd Places:</span> <?php echo $row['bsb2']; ?></p>
-            <p>&emsp;&emsp;<span style='color: white;'>Bee Swarm Battle 3rd Places:</span> <?php echo $row['bsb3']; ?></p>
+            <p>&emsp;&emsp;<span style='color: white;'>Bee Swarm Battle 1st, 2nd, and 3rd Placements</span> <?php echo $row['bsb1']; ?>, <?php echo $row['bsb2']; ?>, <?php echo $row['bsb3']; ?></p>
         </div>
     </div>
 

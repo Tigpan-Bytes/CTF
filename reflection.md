@@ -8,3 +8,5 @@ it is also the thing I am most proud of.
 
 I think everything worked pretty well, there is nothing that I 
 would change except making some of the challenges slightly easier and better explaining the AI-BATTLE.
+
+## I also completed all of the need to have and nice to have items.
